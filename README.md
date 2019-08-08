@@ -1,2 +1,2 @@
-# csharp
-Joseph's CSharp Files - Advanced Software Developer
+# CSharp
+CSharp Files - Advanced Software Developer
