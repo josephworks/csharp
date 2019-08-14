@@ -26,7 +26,20 @@ namespace MarrysConsole
         new Note(Tone.A, Duration.HALF),
         new Note(Tone.B, Duration.QUARTER),
         new Note(Tone.D, Duration.QUARTER),
-        new Note(Tone.D, Duration.HALF)
+        new Note(Tone.D, Duration.HALF),
+        new Note(Tone.B, Duration.QUARTER),
+        new Note(Tone.A, Duration.QUARTER),
+        new Note(Tone.GbelowC, Duration.QUARTER),
+        new Note(Tone.A, Duration.QUARTER),
+        new Note(Tone.B, Duration.QUARTER),
+        new Note(Tone.B, Duration.QUARTER),
+        new Note(Tone.B, Duration.HALF),
+        new Note(Tone.A, Duration.QUARTER),
+        new Note(Tone.A, Duration.QUARTER),
+        new Note(Tone.A, Duration.HALF),
+        new Note(Tone.B, Duration.QUARTER),
+        new Note(Tone.D, Duration.QUARTER),
+        new Note(Tone.D, Duration.HALF),
         };
             // Play the song
             Play(Mary);
@@ -49,19 +62,19 @@ namespace MarrysConsole
         protected enum Tone
         {
             REST = 0,
-            GbelowC = 1196,
-            A = 1220,
-            Asharp = 1233,
-            B = 1247,
-            C = 1262,
-            Csharp = 1277,
-            D = 1294,
-            Dsharp = 1311,
-            E = 1330,
-            F = 1349,
-            Fsharp = 1370,
-            G = 1392,
-            Gsharp = 1415,
+            GbelowC = 3196,
+            A = 3220,
+            Asharp = 3233,
+            B = 3247,
+            C = 3262,
+            Csharp = 3277,
+            D = 3294,
+            Dsharp = 3311,
+            E = 3330,
+            F = 3349,
+            Fsharp = 3370,
+            G = 3392,
+            Gsharp = 3415,
             //Needs tuning, change 1 at the beginning to change frequency by on khz
         }
 
