@@ -14,7 +14,10 @@ namespace HelloConsole
             string first = "";
             string last = "";
             string age = "";
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.Beep();
+            Console.Clear;
             Console.WriteLine("Console > Hello World!");
             Console.WriteLine("Console > What is your First name?");
             first = ReadLine();
