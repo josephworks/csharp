@@ -17,7 +17,7 @@ namespace HelloConsole
             Console.ForegroundColor = ConsoleColor.Green;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Beep();
-            Console.Clear;
+            Console.Clear();
             Console.WriteLine("Console > Hello World!");
             Console.WriteLine("Console > What is your First name?");
             first = ReadLine();
