@@ -15,6 +15,31 @@ namespace Datatypes
             Console.WriteLine("Maxmum Value: " + int.MaxValue);
             Console.WriteLine("Minimum Value: " + int.MinValue);
             Console.ReadLine();
+            byte x = 1;
+            sbyte y = 2;
+            char z = 3;
+            decimal d = 5.23;
+            double b = 22;
+            float f = 33;
+            int i = 123;
+            uint u = 2334;
+            long l = 123456789;
+            ulong e = 123456789123;
+            short s = 255;
+            ushort h = 12;
+            WriteLine(x);
+            WriteLine(y);
+            WriteLine(z);
+            WriteLine(d);
+            WriteLine(b);
+            WriteLine(f);
+            WriteLine(i);
+            WriteLine(u);
+            WriteLine(l);
+            WriteLine(e);
+            WriteLine(s);
+            WriteLine(h);
+            ReadLine();
         }
     }
 }

@@ -109,7 +109,6 @@ namespace MarrysConsole
     }
     /*
     This example produces the following results:
-
     This example plays the first few notes of "Mary Had A Little Lamb" 
     through the console speaker.
     */
