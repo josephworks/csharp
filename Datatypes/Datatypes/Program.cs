@@ -38,8 +38,10 @@ namespace Datatypes
             WriteLine(l);
             WriteLine(e);
             WriteLine(s);
-            WriteLine(h );
+            WriteLine(h);
             ReadLine();
+            WriteLine("My sallary is: "+"{0:c}",26666.667);
+           ReadLine();
         }
     }
 }
