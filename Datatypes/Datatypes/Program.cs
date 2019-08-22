@@ -11,7 +11,7 @@ namespace Datatypes
     {
         static void Main(string[] args)
         {
-            Console.Beep(;
+            Console.Beep();
             Console.WriteLine("Maxmum Value: " + int.MaxValue);
             Console.WriteLine("Minimum Value: " + int.MinValue);
             Console.ReadLine();
