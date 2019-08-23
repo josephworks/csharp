@@ -21,7 +21,7 @@ namespace FormatOutput
             WriteLine("Feet: " + miles * 5280);
             WriteLine("Inches: " + miles * 63360);
             ReadLine();
-
+            
         }
     }
 }
