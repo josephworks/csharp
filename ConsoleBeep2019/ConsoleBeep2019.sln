@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBeep2019", "ConsoleBeep2019\ConsoleBeep2019.csproj", "{90946A36-EEE7-4A6E-B4DC-E59691BB3589}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90946A36-EEE7-4A6E-B4DC-E59691BB3589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90946A36-EEE7-4A6E-B4DC-E59691BB3589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90946A36-EEE7-4A6E-B4DC-E59691BB3589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90946A36-EEE7-4A6E-B4DC-E59691BB3589}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9331468-50F4-4025-8E4B-22400333EA90}
+	EndGlobalSection
+EndGlobal
