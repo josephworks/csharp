@@ -22,17 +22,6 @@ namespace ASCIIText
     J RRRR  
 J   J R R   
  JJJ  R  RR ");
-            Console.WriteLine(@"
-
-     ,/|\
-     //&')
-     '')(
-      (( )
-      )( (
-      (=M=[)###########>
-      (( )
-      (( )_
-      ((__,)");
             Console.WriteLine(@"+------------------+             XXXXXXXXXXXXX                     XX
 |                  |           XXX            XX                   X XX
 |                  |           X                X                 XX  XX
