@@ -19,6 +19,7 @@ namespace Numbers
             // so the program will be executed from bin\Debug or bin\Release
             Microsoft.Scripting.Hosting.ScriptSource pythonScript =
                 pythonEngine.CreateScriptSourceFromFile("..\\..\\python.py");
+            Console.Beep(); //Plays Beep before running python
             pythonScript.Execute();
             ReadLine();
         }
