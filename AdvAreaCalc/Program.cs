@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
+
+/*
+   Copyright JosephWorks 2019
+*/
 
 namespace AdvAreaCalc
 {
@@ -10,6 +15,7 @@ namespace AdvAreaCalc
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
