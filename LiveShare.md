@@ -2,6 +2,6 @@
 
 ## Use the following URL in order to code with Joseph
 
-https://prod.liveshare.vsengsaas.visualstudio.com/join?4DDC1C3F374166CB002C15B8CC2CB75301D2
+https://prod.liveshare.vsengsaas.visualstudio.com/join?2FFEA19599A4A76641748336F5925F87A318
 
 Lets Establish Communism (:
