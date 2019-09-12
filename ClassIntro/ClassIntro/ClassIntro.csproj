@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B474017-209C-4AED-BF25-2FD9E0E387EE}</ProjectGuid>
+    <ProjectGuid>{2075FC73-146F-49FE-99EF-B94C8BF55A28}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ClassIntro</RootNamespace>
     <AssemblyName>ClassIntro</AssemblyName>
@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Line.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
