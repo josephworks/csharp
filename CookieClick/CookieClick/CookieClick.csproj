@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3662C9CF-45CA-4674-9248-006150CD0629}</ProjectGuid>
+    <ProjectGuid>{09358906-DC24-4C76-B4ED-194791EB85F3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CookieClicker</RootNamespace>
-    <AssemblyName>CookieClicker</AssemblyName>
+    <RootNamespace>CookieClick</RootNamespace>
+    <AssemblyName>CookieClick</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -82,7 +82,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\kookie.PNG" />
+    <None Include="Resources\MWCookie.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

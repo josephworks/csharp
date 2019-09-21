@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CookieClicker.Properties {
+namespace CookieClick.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace CookieClicker.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CookieClicker.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CookieClick.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace CookieClicker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kookie {
+        internal static System.Drawing.Bitmap MWCookie {
             get {
-                object obj = ResourceManager.GetObject("kookie", resourceCulture);
+                object obj = ResourceManager.GetObject("MWCookie", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

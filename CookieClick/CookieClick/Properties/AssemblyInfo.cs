@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CookieClicker")]
+[assembly: AssemblyTitle("CookieClick")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CookieClicker")]
+[assembly: AssemblyProduct("CookieClick")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3662c9cf-45ca-4674-9248-006150cd0629")]
+[assembly: Guid("09358906-dc24-4c76-b4ed-194791eb85f3")]
 
 // Version information for an assembly consists of the following four values:
 //

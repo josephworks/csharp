@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CookieClicker.Properties
+namespace CookieClick.Properties
 {
 
 
