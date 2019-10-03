@@ -15,7 +15,7 @@ namespace Realestate
         string m_address;
         public int Earnings(int income, int expense)
         {
-            return
+            return income;
         }
     }
 }
