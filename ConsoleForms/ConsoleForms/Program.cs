@@ -21,7 +21,7 @@ namespace ConsoleForms
                     break;
                 if (times % 2 == 0)
                     continue;
-                Beep(1000, 10000);
+                Beep(1000, 100);
             }
         }
     }
