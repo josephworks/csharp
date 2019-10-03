@@ -21,7 +21,7 @@ namespace ClassIntro
         }
         public double slope()
         {
-            return
+            return slope();
         }
     }
 }
