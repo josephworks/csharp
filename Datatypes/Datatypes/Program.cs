@@ -12,13 +12,13 @@ namespace Datatypes
         static void Main(string[] args)
         {
             Console.Beep();
-            Console.WriteLine("Maxmum Value: " + int.MaxValue);
+            Console.WriteLine("Maximum Value: " + int.MaxValue);
             Console.WriteLine("Minimum Value: " + int.MinValue);
             Console.ReadLine();
             byte x = 1;
             sbyte y = 2;
-            char z = 3;
-            decimal d =9.954758945;
+            //char z = 3;
+            //decimal d = 9.954758945;
             double b = 22;
             float f = 33;
             int i = 123;
@@ -29,8 +29,8 @@ namespace Datatypes
             ushort h = 12;
             WriteLine(x);
             WriteLine(y);
-            WriteLine(z);
-            WriteLine(d);
+            //WriteLine(z);
+            //WriteLine(d);
             WriteLine(b);
             WriteLine(f);
             WriteLine(i);
@@ -39,7 +39,7 @@ namespace Datatypes
             WriteLine(e);
             WriteLine(s);
             WriteLine(h);
-            WriteLine("My sallary is: " + "{0:c}"+d,f,1);
+            //WriteLine("My salary is: " + "{0:c}"+d,f,1);
             ReadLine();
         }
     }
