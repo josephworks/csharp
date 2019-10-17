@@ -15,6 +15,8 @@ namespace ComputerAI
     {
         static void Main(string[] args)
         {
-            Google.Cloud.Dialogflow.V2.Agent;
+            Beep();
+            //Google.Cloud.Dialogflow.V2.Agent;
+        }
     }
 }

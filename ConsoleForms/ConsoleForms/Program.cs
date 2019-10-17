@@ -21,9 +21,12 @@ namespace ConsoleForms
                        "State Controlled Loop", MessageBoxButtons.YesNo,
                        MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Beep(1000, 500);
-                Beep(2000, 500);
-                Beep(3000, 500);
+                times++;
+                if (times == 3)
+                    break;
+                if (times % 2 == 0)
+                    continue;
+                Beep(1000, 10000);
             }
         }
     }

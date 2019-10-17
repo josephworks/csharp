@@ -44,6 +44,8 @@ namespace Numbers
 
             String output;
             WriteLine("{0} - {1} {2}", saying, name, school);
+
+            ReadLine(); // Waits for Enter key to be pressed before it closes the console
         }
 
         public static string student(string name)

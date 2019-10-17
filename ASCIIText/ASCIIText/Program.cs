@@ -17,6 +17,17 @@ namespace ASCIIText
                 FiggleFonts.Standard.Render("Hello, World!"));
             Console.ReadLine();
             Console.Clear();
+            Console.WriteLine(@".--------------.
+|      /~~\    |
+|   W ( %% )   |
+|    \ \--/    |
+|      \II     |
+|       <>\    |
+|       <>  \  |
+|       <>   M |
+|      /  \    |
+|     /    \   |
+`--------------'");
             Console.WriteLine(@"    J RRRR  
     J R   R 
     J RRRR  
