@@ -1,6 +1,6 @@
 ﻿using static System.Console;
 
-namespace ClarkKard
+namespace CLARKE_THING
 {
     internal class Program
     {
