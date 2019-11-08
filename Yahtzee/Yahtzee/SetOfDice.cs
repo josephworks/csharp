@@ -40,5 +40,10 @@ namespace Yahtzee
 
             return false;
         }
+
+        public int getvalue(int n)
+        {
+            return m_dice[n].getValue();
+        }
     }
 }
