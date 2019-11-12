@@ -41,6 +41,17 @@ namespace Yahtzee
             return false;
         }
 
+        public override string ToString()
+        {
+            string retVal = "";
+            for (int i = 0; i < m_dice.Length; i++)
+            {
+                retVal += m_dice[i].getValue() + ",";
+            }
+
+            return retVal;
+        }
+
         public int getvalue(int n)
         {
             return m_dice[n].getValue();

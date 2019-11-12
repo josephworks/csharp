@@ -24,8 +24,12 @@ namespace Yahtzee
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Dice d = new Dice();
             SetOfDice s = new SetOfDice();
+            d.Roll();
             s.Roll();
+            textBox1.Text = d.getValue().ToString();
+            textBox2.Text = s.ToString();
         }
     }
 }

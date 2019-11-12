@@ -9,9 +9,15 @@ namespace Yahtzee
     class Dice
     {
         private int m_value;
+        Random r = new Random();
+
+        public Dice()
+        {
+            System.Threading.Thread.Sleep(10);
+        }
+
         public void Roll()
         {
-            Random r = new Random();
             m_value = r.Next(1, 7);
         }
 
