@@ -21,7 +21,7 @@ namespace Yahtzee
             }
         }
 
-        public Boolean Hasthreeofakind()
+        public Boolean HasNkind(int n)
         {
             int[] vals = new int[5];
             for (int i = 0; i < vals.Length; i++)
@@ -29,16 +29,29 @@ namespace Yahtzee
                 vals[i] = m_dice[i].getValue();
             }
             Array.Sort(vals);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6 - n; i++)
             {
                 if (vals[i] == vals[i+1] &&
                     vals[i+1] == vals[i+2])
                 {
                     return true;
                 }
+
+                for (int j = 0; j < n; j++)
+                {
+                    if (vals[i] == vals[i + j])
+                    {
+
+                    }
+                }
             }
 
             return false;
+        }
+
+        public int getvalue(int n)
+        {
+            return m_dice[n].getValue();
         }
 
         public override string ToString()
@@ -50,11 +63,6 @@ namespace Yahtzee
             }
 
             return retVal;
-        }
-
-        public int getvalue(int n)
-        {
-            return m_dice[n].getValue();
         }
     }
 }
