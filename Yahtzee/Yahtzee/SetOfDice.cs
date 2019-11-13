@@ -5,6 +5,7 @@ namespace Yahtzee
     class SetOfDice
     {
         Dice[] m_dice = new Dice[5];
+        bool[] m_keep = new bool[5];
         //Put shoes in box
         public SetOfDice()
         {
@@ -16,12 +17,19 @@ namespace Yahtzee
         public void Roll()
         {
             foreach (Dice d in m_dice)
-            {
-                d.Roll();
-            }
+                for (int i = 0; i < 5; i++)
+                {
+                    if (!m_keep[i])
+                        m_dice[i].Roll();
+                }
         }
 
-        public Boolean HasNkind(int n)
+        public void keep(int n)
+        {
+            m_keep[n] = true;
+        }
+
+        public Boolean HasThreeOfAKind()
         {
             int[] vals = new int[5];
             for (int i = 0; i < vals.Length; i++)
@@ -29,23 +37,14 @@ namespace Yahtzee
                 vals[i] = m_dice[i].getValue();
             }
             Array.Sort(vals);
-            for (int i = 0; i < 6 - n; i++)
+            for (int i = 0; i < 3; i++)
             {
-                if (vals[i] == vals[i+1] &&
-                    vals[i+1] == vals[i+2])
+                if (vals[i] == vals[i + 1] &&
+                    vals[i + 1] == vals[i + 2])
                 {
                     return true;
                 }
-
-                for (int j = 0; j < n; j++)
-                {
-                    if (vals[i] == vals[i + j])
-                    {
-
-                    }
-                }
             }
-
             return false;
         }
 

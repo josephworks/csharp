@@ -26,10 +26,26 @@ namespace Yahtzee
         {
             Dice d = new Dice();
             SetOfDice s = new SetOfDice();
+            if (checkBox1.Checked)
+                s.keep(0);
+            if (checkBox2.Checked)
+                s.keep(1);
+            if (checkBox3.Checked)
+                s.keep(2);
+            if (checkBox4.Checked)
+                s.keep(3);
+            if (checkBox5.Checked)
+                s.keep(4);
             d.Roll();
             s.Roll();
-            textBox1.Text = d.getValue().ToString();
-            textBox2.Text = s.ToString();
+            textBox1.Text = s.getvalue(0).ToString();
+            textBox2.Text = s.getvalue(1).ToString();
+            textBox3.Text = s.getvalue(2).ToString();
+            textBox4.Text = s.getvalue(3).ToString();
+            textBox5.Text = s.getvalue(4).ToString();
+            textBox6.Text = s.ToString();
+            if (s.HasThreeOfAKind())
+                this.BackColor = Color.Aqua;
         }
     }
 }
