@@ -12,6 +12,7 @@ namespace Yahtzee
 {
     public partial class Form1 : Form
     {
+        SetOfDice s = new SetOfDice();
         public Form1()
         {
             InitializeComponent();
@@ -24,8 +25,7 @@ namespace Yahtzee
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Dice d = new Dice();
-            SetOfDice s = new SetOfDice();
+            
             if (checkBox1.Checked)
                 s.keep(0);
             if (checkBox2.Checked)
@@ -36,7 +36,6 @@ namespace Yahtzee
                 s.keep(3);
             if (checkBox5.Checked)
                 s.keep(4);
-            d.Roll();
             s.Roll();
             textBox1.Text = s.getvalue(0).ToString();
             textBox2.Text = s.getvalue(1).ToString();
@@ -46,6 +45,11 @@ namespace Yahtzee
             textBox6.Text = s.ToString();
             if (s.HasThreeOfAKind())
                 this.BackColor = Color.Aqua;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            s.reset();
         }
     }
 }

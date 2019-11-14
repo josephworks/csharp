@@ -36,6 +36,10 @@ namespace Yahtzee
         public void reset()
         {
             m_numrolls = 0;
+            for (int i = 0; i < m_keep.Length; i++)
+            {
+                m_keep[i] = false;
+            }
         }
 
         public void keep(int n)
