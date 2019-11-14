@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Yahtzee
 {
-    class Dice
+    internal class Dice
     {
         private int m_value;
-        Random r = new Random();
+        private Random r = new Random();
 
         public Dice()
         {
             System.Threading.Thread.Sleep(10);
+            Roll();
         }
 
         public void Roll()

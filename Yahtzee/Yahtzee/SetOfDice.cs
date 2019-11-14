@@ -2,10 +2,12 @@
 
 namespace Yahtzee
 {
-    class SetOfDice
+    internal class SetOfDice
     {
-        Dice[] m_dice = new Dice[5];
-        bool[] m_keep = new bool[5];
+        private Dice[] m_dice = new Dice[5];
+        private bool[] m_keep = new bool[5];
+        private int m_numrolls = 0;
+
         //Put shoes in box
         public SetOfDice()
         {
@@ -14,14 +16,26 @@ namespace Yahtzee
                 m_dice[i] = new Dice();
             }
         }
+
         public void Roll()
         {
+            if (m_numrolls == 3)
+            {
+                return;
+            }
+
+            m_numrolls++;
             foreach (Dice d in m_dice)
                 for (int i = 0; i < 5; i++)
                 {
                     if (!m_keep[i])
                         m_dice[i].Roll();
                 }
+        }
+
+        public void reset()
+        {
+            m_numrolls = 0;
         }
 
         public void keep(int n)
