@@ -33,7 +33,7 @@ namespace Yahtzee
                 }
         }
 
-        public void reset()
+        public void Reset()
         {
             m_numrolls = 0;
             for (int i = 0; i < m_keep.Length; i++)
@@ -42,7 +42,7 @@ namespace Yahtzee
             }
         }
 
-        public void keep(int n)
+        public void Keep(int n)
         {
             m_keep[n] = true;
         }
@@ -66,7 +66,71 @@ namespace Yahtzee
             return false;
         }
 
-        public int getvalue(int n)
+        public Boolean HasFourOfAKind()
+        {
+            int[] vals = new int[5];
+            for (int i = 0; i < vals.Length; i++)
+            {
+                vals[i] = m_dice[i].getValue();
+            }
+            Array.Sort(vals);
+            for (int i = 0; i < 2; i++)
+            {
+                if (vals[i] == vals[i + 1] &&
+                    vals[i + 1] == vals[i + 2] &&
+                    vals[i + 3] == vals[i + 2])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Boolean HasFiveOfAKind()
+        {
+            int[] vals = new int[5];
+            for (int i = 0; i < vals.Length; i++)
+            {
+                vals[i] = m_dice[i].getValue();
+            }
+            Array.Sort(vals);
+            for (int i = 0; i < 1; i++)
+            {
+                if (vals[i] == vals[i + 1] &&
+                    vals[i + 1] == vals[i + 2] &&
+                    vals[i + 3] == vals[i + 2] &&
+                    vals[i + 3] == vals[i + 4])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool HasFullHouse()
+        {
+            int[] vals = new int[5];
+            for (int i = 0; i < vals.Length; i++)
+            {
+                vals[i] = m_dice[i].getValue();
+            }
+            Array.Sort(vals);
+            for (int i = 0; i < 1; i++)
+            {
+                if (vals[i] == vals[i + 1] &&
+                    vals[i + 1] == vals[i + 2] &&
+                    vals[i + 3] == vals[i + 4] ||
+                    vals[i + 2] == vals[i + 3] &&
+                    vals[i + 3] == vals[i + 4] &&
+                    vals[i] == vals[i + 1])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public int Getvalue(int n)
         {
             return m_dice[n].getValue();
         }
