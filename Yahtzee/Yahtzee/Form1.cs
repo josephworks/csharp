@@ -109,19 +109,69 @@ namespace Yahtzee
                 toolStripProgressBar4.Value = 100;
                 toolStripProgressBar5.Value = 100;
                 BackColor = Color.Black;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
+                Console.Beep();
+                toolStripProgressBar1.Value = 0;
+                toolStripProgressBar2.Value = 0;
+                toolStripProgressBar3.Value = 0;
+                toolStripProgressBar4.Value = 0;
+                toolStripProgressBar5.Value = 0;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
+                Console.Beep();
+                toolStripProgressBar1.Value = 0;
+                toolStripProgressBar2.Value = 0;
+                toolStripProgressBar3.Value = 0;
+                toolStripProgressBar4.Value = 0;
+                toolStripProgressBar5.Value = 0;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            BackColor = Color.LightGreen;
             s.Reset();
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             checkBox3.Checked = false;
             checkBox4.Checked = false;
             checkBox5.Checked = false;
-            //clear dice numbers
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            BackColor = Color.LightGreen;
+            Console.Beep();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -226,13 +276,69 @@ namespace Yahtzee
                 toolStripProgressBar4.Value = 100;
                 toolStripProgressBar5.Value = 100;
                 BackColor = Color.Black;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
+                Console.Beep();
+                toolStripProgressBar1.Value = 0;
+                toolStripProgressBar2.Value = 0;
+                toolStripProgressBar3.Value = 0;
+                toolStripProgressBar4.Value = 0;
+                toolStripProgressBar5.Value = 0;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
+                Console.Beep();
+                toolStripProgressBar1.Value = 0;
+                toolStripProgressBar2.Value = 0;
+                toolStripProgressBar3.Value = 0;
+                toolStripProgressBar4.Value = 0;
+                toolStripProgressBar5.Value = 0;
+                BackColor = Color.White;
+                Console.Beep();
+                toolStripProgressBar1.Value = 100;
+                toolStripProgressBar2.Value = 100;
+                toolStripProgressBar3.Value = 100;
+                toolStripProgressBar4.Value = 100;
+                toolStripProgressBar5.Value = 100;
+                BackColor = Color.Black;
             }
         }
 
         private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BackColor = Color.LightGreen;
             s.Reset();
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            BackColor = Color.LightGreen;
+            Console.Beep();
         }
     }
 }
