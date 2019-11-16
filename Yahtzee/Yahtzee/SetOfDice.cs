@@ -130,6 +130,51 @@ namespace Yahtzee
             return false;
         }
 
+        public bool HasLargeStraight()
+        {
+            int[] vals = new int[5];
+            for (int i = 0; i < vals.Length; i++)
+            {
+                vals[i] = m_dice[i].getValue();
+            }
+            Array.Sort(vals);
+            if (vals[0] == 1 &&
+            vals[1] == 2 &&
+            vals[2] == 3 &&
+            vals[3] == 4 &&
+            vals[4] == 5 ||
+            vals[0] == 2 &&
+            vals[1] == 3 &&
+            vals[2] == 4 &&
+            vals[3] == 5 &&
+            vals[4] == 6)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool HasYahtzee()
+        {
+            int[] vals = new int[5];
+            for (int i = 0; i < vals.Length; i++)
+            {
+                vals[i] = m_dice[i].getValue();
+            }
+            Array.Sort(vals);
+            for (int i = 0; i < 1; i++)
+            {
+                if (vals[i] == vals[i + 1] &&
+                vals[i + 1] == vals[i + 2] &&
+                vals[i + 2] == vals[i + 3] &&
+                vals[i + 3] == vals[i + 4])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public int Getvalue(int n)
         {
             return m_dice[n].getValue();
@@ -142,8 +187,7 @@ namespace Yahtzee
             {
                 retVal += m_dice[i].getValue() + ",";
             }
-
-            return retVal;
+            return retVal.TrimEnd(retVal[retVal.Length - 1]); ;
         }
     }
 }
