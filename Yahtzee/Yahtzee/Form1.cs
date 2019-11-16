@@ -116,6 +116,12 @@ namespace Yahtzee
         {
             BackColor = Color.LightGreen;
             s.Reset();
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            //clear dice numbers
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
