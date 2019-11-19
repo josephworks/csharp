@@ -38,5 +38,44 @@ namespace Thing_While_Clarke_Was_Gone
             }
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            int card = rnd.Next(52);
+            if (tf == true)
+            {
+                pictureBox2.Image = imageList1.Images[card];
+                tf = false;
+                RNG1 = card;
+            }
+            else
+            {
+                pictureBox3.Image = imageList1.Images[card];
+                tf = true;
+                RNG2 = card;
+            }
+        }
+
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void drawToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int card = rnd.Next(52);
+            if (tf == true)
+            {
+                pictureBox2.Image = imageList1.Images[card];
+                tf = false;
+                RNG1 = card;
+            }
+            else
+            {
+                pictureBox3.Image = imageList1.Images[card];
+                tf = true;
+                RNG2 = card;
+            }
+        }
     }
 }
