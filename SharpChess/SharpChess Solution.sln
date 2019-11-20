@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpChess", "SharpChess Game\SharpChess.csproj", "{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0BDEDD50-6D5C-4D77-8A78-6080FA116D76}"
+	ProjectSection(SolutionItems) = preProject
+		GNU_GPL_Licence.txt = GNU_GPL_Licence.txt
+		Local.testsettings = Local.testsettings
+		SharpChess Game\Images\Logo\logo.bmp = SharpChess Game\Images\Logo\logo.bmp
+		README.txt = README.txt
+		Settings.StyleCop = Settings.StyleCop
+		SharpChess Solution.vsmdi = SharpChess Solution.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SharpChess Setup", "SharpChess Setup\SharpChess Setup.vdproj", "{972AC84C-F7E2-4239-80CA-17032B8EA991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpChess.Model", "SharpChess.Model\SharpChess.Model.csproj", "{EE301A37-33A9-4B7A-BE08-D001057610CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpChess.Model.Tests", "SharpChess.Model.Tests\SharpChess.Model.Tests.csproj", "{7A6D5A21-2856-48C1-B602-B2F575C202F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F5FD2F27-6DCB-453C-B018-0AC8D4BC4109}.Release|x86.ActiveCfg = Release|Any CPU
+		{972AC84C-F7E2-4239-80CA-17032B8EA991}.Debug|Any CPU.ActiveCfg = Debug
+		{972AC84C-F7E2-4239-80CA-17032B8EA991}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{972AC84C-F7E2-4239-80CA-17032B8EA991}.Debug|x86.ActiveCfg = Debug
+		{972AC84C-F7E2-4239-80CA-17032B8EA991}.Release|Any CPU.ActiveCfg = Release
+		{972AC84C-F7E2-4239-80CA-17032B8EA991}.Release|Mixed Platforms.ActiveCfg = Release
+		{972AC84C-F7E2-4239-80CA-17032B8EA991}.Release|x86.ActiveCfg = Release
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EE301A37-33A9-4B7A-BE08-D001057610CD}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{7A6D5A21-2856-48C1-B602-B2F575C202F6}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SharpChess Solution.vsmdi
+	EndGlobalSection
+EndGlobal
