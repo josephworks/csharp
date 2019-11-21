@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkflowConsole", "WorkflowConsole\WorkflowConsole.csproj", "{0BE2B7C1-8DB3-46D4-B307-3A6AEEF98DA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BE2B7C1-8DB3-46D4-B307-3A6AEEF98DA1}.Debug|x86.ActiveCfg = Debug|x86
+		{0BE2B7C1-8DB3-46D4-B307-3A6AEEF98DA1}.Debug|x86.Build.0 = Debug|x86
+		{0BE2B7C1-8DB3-46D4-B307-3A6AEEF98DA1}.Release|x86.ActiveCfg = Release|x86
+		{0BE2B7C1-8DB3-46D4-B307-3A6AEEF98DA1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {046E6B87-F140-47FA-AB11-266AD6B9D039}
+	EndGlobalSection
+EndGlobal
