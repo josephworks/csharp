@@ -8,7 +8,7 @@ namespace ChessGame
 {
     class Queen : ChessPiece
     {
-        public Queen(Piece p, Color c) : base(Piece.eQUEEN, c)
+        public Queen(Piece p, C c) : base(Piece.eQUEEN, c)
         {
 
         }

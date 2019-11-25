@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,13 +12,14 @@ namespace ChessGame
         eKING, eQUEEN, eROOK, eKNIGHT, ePAWN, eBISHOP
     }
 
-    public enum Color
+    public enum C
     {
         eBLACK, eWHITE
     }
     class ChessPiece
     {
-        public ChessPiece(Piece unit, Color c)
+        public Image m_image;
+        public ChessPiece(Piece unit, C c)
         {
 
         }

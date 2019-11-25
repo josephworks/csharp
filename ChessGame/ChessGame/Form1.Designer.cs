@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Bishop_Black.gif");
+            this.imageList1.Images.SetKeyName(1, "Bishop_White.gif");
+            this.imageList1.Images.SetKeyName(2, "King_Black.gif");
+            this.imageList1.Images.SetKeyName(3, "King_White.gif");
+            this.imageList1.Images.SetKeyName(4, "Knight_Black.gif");
+            this.imageList1.Images.SetKeyName(5, "Knight_White.gif");
+            this.imageList1.Images.SetKeyName(6, "Pawn_Black.gif");
+            this.imageList1.Images.SetKeyName(7, "Pawn_White.gif");
+            this.imageList1.Images.SetKeyName(8, "Queen_Black.gif");
+            this.imageList1.Images.SetKeyName(9, "Queen_White.gif");
+            this.imageList1.Images.SetKeyName(10, "Rook_Black.gif");
+            this.imageList1.Images.SetKeyName(11, "Rook_White.gif");
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Chess";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -43,6 +64,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

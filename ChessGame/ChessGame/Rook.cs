@@ -8,7 +8,7 @@ namespace ChessGame
 {
     class Rook : ChessPiece
     {
-        public Rook(Piece p, Color c) : base(Piece.eROOK, c)
+        public Rook(Piece p, C c) : base(Piece.eROOK, c)
         {
 
         }

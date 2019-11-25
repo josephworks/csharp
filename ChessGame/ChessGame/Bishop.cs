@@ -8,7 +8,7 @@ namespace ChessGame
 {
     class Bishop : ChessPiece
     {
-        public Bishop(Piece p, Color c) : base(Piece.eBISHOP, c)
+        public Bishop(Piece p, C c) : base(Piece.eBISHOP, c)
         {
 
         }
