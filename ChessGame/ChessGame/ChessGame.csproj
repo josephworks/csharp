@@ -80,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -94,6 +95,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bishop_Black.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bishop_White.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King_Black.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\King_White.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight_Black.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight_White.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pawn_Black.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pawn_White.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen_Black.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Queen_White.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rook_Black.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rook_White.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
