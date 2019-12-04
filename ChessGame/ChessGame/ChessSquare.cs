@@ -16,7 +16,6 @@ namespace ChessGame
         public ChessSquare(ChessPiece p)
         {
             m_piece = p;
-            me = this;
         }
 
         public ChessSquare(ChessPiece p, int row, int column)
@@ -24,7 +23,6 @@ namespace ChessGame
             m_piece = p;
             m_row = row;
             m_column = column;
-            me = this;
         }
 
 
@@ -32,7 +30,6 @@ namespace ChessGame
         {
             m_row = row;
             m_column = column;
-            me = this;
         }
 
         public ChessSquare(string location)
@@ -70,7 +67,6 @@ namespace ChessGame
             }
 
             m_row = int.Parse(row);
-            me = this;
         }
 
         public override string ToString()
@@ -105,12 +101,9 @@ namespace ChessGame
             }
 
             return retVal + m_row;
-            me = this;
         }
 
-        public static ChessSquare.GetSquare
-        {
-            return me;
-        }
+        public int GetRow() {return m_row; }
+        public int GetColumn() { return m_column; }
     }
 }

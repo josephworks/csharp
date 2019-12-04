@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace ChessGame
 {
-    class Bishop : ChessPiece
+    class bishop : Chesspiece
     {
-        public Bishop(Piece p, Color c) : base(Piece.eBISHOP, c)
+        public bishop(Color c,Chesssquare s) : base(piece.eBISHOP, c,s)
         {
-            if (c = Color.eWHITE)
+            if (c == Color.eWHITE)
             {
-                m_image = ChessGame.Properties.Resources.Bishop_White;
+
+                m_image = CHESSONFORM.Properties.Resources.BishopW;
             }
             else
             {
-                m_image = ChessGame.Properties.Resources.Bishop_Black;
+                m_image = CHESSONFORM.Properties.Resources.BishopB;
             }
         }
-
-        public override ChessSquare[] GetSquares()
+        public override Chesssquare[] GetSquares()
         {
-            ChessBoard b = ChessBoard.GetBoard;
+            Chessboard b = Chessboard.GetBoard();
             return null;
         }
     }
