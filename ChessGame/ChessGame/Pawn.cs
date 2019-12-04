@@ -10,7 +10,20 @@ namespace ChessGame
     {
         public Pawn(Piece p, Color c) : base(Piece.ePAWN, c)
         {
+            if (c = Color.eWHITE)
+            {
+                m_image = ChessGame.Properties.Resources.Pawn_White;
+            }
+            else
+            {
+                m_image = ChessGame.Properties.Resources.Pawn_Black;
+            }
+        }
 
+        public override ChessSquare[] GetSquares()
+        {
+            ChessBoard b = ChessBoard.GetBoard;
+            return null;
         }
     }
 }

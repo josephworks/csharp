@@ -10,7 +10,20 @@ namespace ChessGame
     {
         public Queen(Piece p, Color c) : base(Piece.eQUEEN, c)
         {
+            if (c = Color.eWHITE)
+            {
+                m_image = ChessGame.Properties.Resources.Queen_White;
+            }
+            else
+            {
+                m_image = ChessGame.Properties.Resources.Queen_Black;
+            }
+        }
 
+        public override ChessSquare[] GetSquares()
+        {
+            ChessBoard b = ChessBoard.GetBoard;
+            return null;
         }
     }
 }

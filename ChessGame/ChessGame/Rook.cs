@@ -10,7 +10,20 @@ namespace ChessGame
     {
         public Rook(Piece p, Color c) : base(Piece.eROOK, c)
         {
+            if (c = Color.eWHITE)
+            {
+                m_image = ChessGame.Properties.Resources.Rook_White;
+            }
+            else
+            {
+                m_image = ChessGame.Properties.Resources.Rook_Black;
+            }
+        }
 
+        public override ChessSquare[] GetSquares()
+        {
+            ChessBoard b = ChessBoard.GetBoard;
+            return null;
         }
     }
 }

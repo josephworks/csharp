@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace ChessGame
 {
@@ -15,11 +11,11 @@ namespace ChessGame
     {
         eBLACK, eWHITE
     }
-    class ChessPiece
-    {
-        public ChessPiece(Piece unit, Color c)
-        {
 
-        }
+    abstract class ChessPiece
+    {
+        public Image m_image;
+        public ChessPiece(Piece unit, Color c) { }
+        public abstract ChessSquare[] GetSquares();
     }
 }
