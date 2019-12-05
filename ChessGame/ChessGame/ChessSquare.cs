@@ -8,7 +8,6 @@ namespace ChessGame
 {
     class ChessSquare
     {
-        private static ChessSquare me;
         private ChessPiece m_piece;
         private int m_row;
         private int m_column;

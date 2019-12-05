@@ -15,11 +15,11 @@ namespace ChessGame
     abstract class ChessPiece
     {
         public Image m_image;
-        public Chesssquare m_square;
-        public Chesspiece(piece unit, Color color,Chesssquare s) 
+        public ChessSquare m_square;
+        public ChessPiece(Piece unit, Color color,ChessSquare s) 
         {
             m_square = s;
         }
-        public abstract Chesssquare[] GetSquares();
+        public abstract ChessSquare[] GetSquares();
     }
 }

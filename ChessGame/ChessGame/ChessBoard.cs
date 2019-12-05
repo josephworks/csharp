@@ -10,14 +10,14 @@ namespace ChessGame
     class ChessBoard
     {
         static ChessBoard me;
-        Chesssquare[,] m_b = new Chesssquare[8, 8];
+        ChessSquare[,] m_b = new ChessSquare[8, 8];
         public ChessBoard()
         {
             for (int r = 0; r < 8; r++)
             {
                 for (int c = 0; c < 8; c++)
                 {
-                    m_b[r, c] = new Chesssquare(r+1,c+1);
+                    m_b[r, c] = new ChessSquare(r+1,c+1);
                     System.Console.WriteLine(m_b[r, c]);
                 }
             }
@@ -27,7 +27,7 @@ namespace ChessGame
         {
             return me;
         }
-        public Chesssquare GetSquare(int r, int c)
+        public ChessSquare GetSquare(int r, int c)
         {
             return m_b[r, c];
         }

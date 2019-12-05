@@ -8,9 +8,9 @@ namespace ChessGame
 {
     class Rook : ChessPiece
     {
-        public Rook(Piece p, Color c) : base(Piece.eROOK, c)
+        public Rook(Piece p, Color c, ChessSquare s) : base(Piece.eROOK, c, s)
         {
-            if (c = Color.eWHITE)
+            if (c == Color.eWHITE)
             {
                 m_image = ChessGame.Properties.Resources.Rook_White;
             }
@@ -22,7 +22,7 @@ namespace ChessGame
 
         public override ChessSquare[] GetSquares()
         {
-            ChessBoard b = ChessBoard.GetBoard;
+            ChessBoard b = ChessBoard.GetBoard();
             return null;
         }
     }

@@ -8,9 +8,9 @@ namespace ChessGame
 {
     class Queen : ChessPiece
     {
-        public Queen(Piece p, Color c) : base(Piece.eQUEEN, c)
+        public Queen(Piece p, Color c, ChessSquare s) : base(Piece.eQUEEN, c, s)
         {
-            if (c = Color.eWHITE)
+            if (c == Color.eWHITE)
             {
                 m_image = ChessGame.Properties.Resources.Queen_White;
             }
@@ -22,7 +22,7 @@ namespace ChessGame
 
         public override ChessSquare[] GetSquares()
         {
-            ChessBoard b = ChessBoard.GetBoard;
+            ChessBoard b = ChessBoard.GetBoard();
             return null;
         }
     }

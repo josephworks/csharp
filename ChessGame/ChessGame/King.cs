@@ -6,24 +6,28 @@ using System.Threading.Tasks;
 
 namespace ChessGame
 {
-    class king : Chesspiece
+    class king : ChessPiece
     {
-        public king(Color c,Chesssquare s) : base(piece.eKING, c,s)
+        public king(Color c,ChessSquare s) : base(Piece.eKING, c,s)
         {
             if (c == Color.eWHITE)
             {
 
-                m_image = CHESSONFORM.Properties.Resources.King_White;
+                m_image = ChessGame.Properties.Resources.King_White;
             }
             else
             {
-                m_image = CHESSONFORM.Properties.Resources.King_Black;
+                m_image = ChessGame.Properties.Resources.King_Black;
             }
         }
-        public override Chesssquare[] GetSquares()
+        public override ChessSquare[] GetSquares()
         {
-            Chessboard b = Chessboard.GetBoard();
-            Chesssquare[] move = new Chesssquare[8];
+            ChessBoard b = ChessBoard.GetBoard();
+            ChessSquare[] move = new ChessSquare[8];
+            if (m_square.GetColumn() > 1)
+            {
+                move[0] = b.GetSquare(m_square.GetRow(), m_square.GetColumn() - 1);
+            }
             move[0] = b.GetSquare(m_square.GetRow(),m_square.GetColumn()-1);
             move[1] = b.GetSquare(m_square.GetRow(), m_square.GetColumn()+1);
             move[2] = b.GetSquare(m_square.GetRow()-1, m_square.GetColumn()-1);
