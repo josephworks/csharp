@@ -30,5 +30,6 @@ namespace ChessGame
         {
             return m_b[r, c];
         }
+  
     }
 }

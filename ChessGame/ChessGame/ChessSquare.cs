@@ -104,5 +104,7 @@ namespace ChessGame
 
         public int GetRow() {return m_row; }
         public int GetColumn() { return m_column; }
+        public void SetChessPiece(ChessPiece p) { m_piece = p; }
+        public ChessPiece GetChessPiece() { return m_piece; }
     }
 }

@@ -19,6 +19,7 @@ namespace ChessGame
         public ChessPiece(Piece unit, Color color,ChessSquare s) 
         {
             m_square = s;
+            s.SetChessPiece(this);
         }
         public abstract ChessSquare[] GetSquares();
     }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ChessGame
 {
-    class king : ChessPiece
+    class King : ChessPiece
     {
-        public king(Color c,ChessSquare s) : base(Piece.eKING, c,s)
+        public King(Color c,ChessSquare s) : base(Piece.eKING, c,s)
         {
             if (c == Color.eWHITE)
             {
@@ -19,6 +19,7 @@ namespace ChessGame
             {
                 m_image = ChessGame.Properties.Resources.King_Black;
             }
+            
         }
         public override ChessSquare[] GetSquares()
         {
