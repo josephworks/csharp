@@ -25,7 +25,7 @@ namespace ChessGame
         }
 
 
-        public ChessSquare(int row, int column)
+        public ChessSquare(int row, int column, System.Windows.Forms.PictureBox pictureBox)
         {
             m_row = row;
             m_column = column;

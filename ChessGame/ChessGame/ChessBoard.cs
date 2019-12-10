@@ -10,13 +10,13 @@ namespace ChessGame
     {
         static ChessBoard me;
         ChessSquare[,] m_b = new ChessSquare[8, 8];
-        public ChessBoard()
+        public ChessBoard(System.Windows.Forms.PictureBox[,] pictureBoxes)
         {
             for (int r = 0; r < 8; r++)
             {
                 for (int c = 0; c < 8; c++)
                 {
-                    m_b[r, c] = new ChessSquare(r+1,c+1);
+                    m_b[r, c] = new ChessSquare(r+1,c+1, pictureBoxes[r,c]);
                     System.Console.WriteLine(m_b[r, c]);
                 }
             }
