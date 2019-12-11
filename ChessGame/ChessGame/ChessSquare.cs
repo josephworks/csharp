@@ -8,7 +8,7 @@ namespace ChessGame
 {
     class ChessSquare
     {
-        private ChessPiece m_piece = new ChessPiece();
+        private ChessPiece m_piece;
         private int m_row;
         private int m_column;
 
@@ -25,7 +25,7 @@ namespace ChessGame
         }
 
 
-        public ChessSquare(int row, int column)
+        public ChessSquare(int row, int column, System.Windows.Forms.PictureBox pictureBox)
         {
             m_row = row;
             m_column = column;
@@ -101,5 +101,10 @@ namespace ChessGame
 
             return retVal + m_row;
         }
+
+        public int GetRow() {return m_row; }
+        public int GetColumn() { return m_column; }
+        public void SetChessPiece(ChessPiece p) { m_piece = p; }
+        public ChessPiece GetChessPiece() { return m_piece; }
     }
 }
