@@ -14,6 +14,7 @@ namespace Beep
     {
         static void Main(string[] args)
         {
+            Beep();
             Console.Beep();
             Console.WriteLine("Hello World!");
             ReadLine();
