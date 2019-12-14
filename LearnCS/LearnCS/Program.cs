@@ -1,9 +1,33 @@
-﻿
+﻿//
+//// Code from https://learnxinyminutes.com/docs/csharp/
+//// Modified by Joseph Robinson (JosephWorks)
+//
+
 // Single-line comments start with //
 
 /*
 Multi-line comments look like this
 */
+
+
+
+// Specify the namespaces this source code will be using
+// The namespaces below are all part of the standard .NET Framework Class Library
+
+using System;
+using System.Collections.Generic;
+// But this one is not:
+using System.Data.Entity;
+using System.Dynamic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using static System.Math;
+// In order to be able to use it, you need to add a dll reference
+// This can be done with the NuGet package manager: `Install-Package EntityFramework`
+
+// Namespaces define scope to organize code into "packages" or "modules"
+// Using this code from another source file: using LearnCS;
 
 /// <summary>
 /// This is an XML documentation comment which can be used to generate external
@@ -11,29 +35,12 @@ Multi-line comments look like this
 /// </summary>
 /// <param name="firstParam">This is some parameter documentation for firstParam</param>
 /// <returns>Information on the returned value of a function</returns>
-public void MethodOrClassOrOtherWithParsableHelp(string firstParam) {}
+//public void MethodOrClassOrOtherWithParsableHelp(string firstParam) { }
 
-// Specify the namespaces this source code will be using
-// The namespaces below are all part of the standard .NET Framework Class Library
-using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using System.IO;
-
-// But this one is not:
-using System.Data.Entity;
-// In order to be able to use it, you need to add a dll reference
-// This can be done with the NuGet package manager: `Install-Package EntityFramework`
-
-// Namespaces define scope to organize code into "packages" or "modules"
-// Using this code from another source file: using Learning.CSharp;
-namespace Learning.CSharp
+namespace LearnCS
 {
     // Each .cs file should at least contain a class with the same name as the file.
-    // You're allowed to do otherwise, but shouldn't for sanity.
+    // You're allowed to do otherwise, BUT SHOULDN'T FOR SANITY!
     public class LearnCSharp
     {
         // BASIC SYNTAX - skip to INTERESTING FEATURES if you have used Java or C++ before
@@ -59,43 +66,56 @@ namespace Learning.CSharp
             // Sbyte - Signed 8-bit integer
             // (-128 <= sbyte <= 127)
             sbyte fooSbyte = 100;
+            Console.WriteLine(fooSbyte);
 
             // Byte - Unsigned 8-bit integer
             // (0 <= byte <= 255)
             byte fooByte = 100;
+            Console.WriteLine(fooByte);
 
             // Short - 16-bit integer
             // Signed - (-32,768 <= short <= 32,767)
             // Unsigned - (0 <= ushort <= 65,535)
             short fooShort = 10000;
             ushort fooUshort = 10000;
+            Console.WriteLine(fooShort);
+            Console.WriteLine(fooUshort);
 
             // Integer - 32-bit integer
             int fooInt = 1; // (-2,147,483,648 <= int <= 2,147,483,647)
             uint fooUint = 1; // (0 <= uint <= 4,294,967,295)
+            Console.WriteLine(fooInt);
+            Console.WriteLine(fooUint);
 
             // Long - 64-bit integer
             long fooLong = 100000L; // (-9,223,372,036,854,775,808 <= long <= 9,223,372,036,854,775,807)
             ulong fooUlong = 100000L; // (0 <= ulong <= 18,446,744,073,709,551,615)
+            Console.WriteLine(fooLong);
+            Console.WriteLine(fooUlong);
             // Numbers default to being int or uint depending on size.
             // L is used to denote that this variable value is of type long or ulong
 
             // Double - Double-precision 64-bit IEEE 754 Floating Point
             double fooDouble = 123.4; // Precision: 15-16 digits
+            Console.WriteLine(fooDouble);
 
             // Float - Single-precision 32-bit IEEE 754 Floating Point
             float fooFloat = 234.5f; // Precision: 7 digits
+            Console.WriteLine(fooFloat);
             // f is used to denote that this variable value is of type float
 
             // Decimal - a 128-bits data type, with more precision than other floating-point types,
             // suited for financial and monetary calculations
             decimal fooDecimal = 150.3m;
+            Console.WriteLine(fooDecimal);
 
             // Boolean - true & false
             bool fooBoolean = true; // or false
+            Console.WriteLine(fooBoolean);
 
             // Char - A single 16-bit Unicode character
             char fooChar = 'A';
+            Console.WriteLine(fooChar);
 
             // Strings -- unlike the previous base types which are all value types,
             // a string is a reference type. That is, you can set it to null
@@ -125,10 +145,12 @@ namespace Learning.CSharp
             // You can split a string over two lines with the @ symbol. To escape " use ""
             string bazString = @"Here's some stuff
 on a new line! ""Wow!"", the masses cried";
+            Console.WriteLine(bazString);
 
             // Use const or read-only to make a variable immutable
             // const values are calculated at compile time
-            const int HoursWorkPerWeek = 9001;
+            const int hoursWorkPerWeek = 9001;
+            Console.WriteLine(hoursWorkPerWeek);
 
             ///////////////////////////////////////////////////
             // Data Structures
@@ -247,14 +269,15 @@ on a new line! ""Wow!"", the masses cried";
             do
             {
                 // Start iteration 100 times, fooDoWhile 0->99
+/*
                 if (false)
                     continue; // skip the current iteration
+*/
 
                 fooDoWhile++;
 
                 if (fooDoWhile == 50)
                     break; // breaks from the loop completely
-
             } while (fooDoWhile < 100);
 
             // for loop structure => for(<start_statement>; <conditional>; <step>)
@@ -279,31 +302,34 @@ on a new line! ""Wow!"", the masses cried";
             // It also works with enumerated types (discussed in Enum Types),
             // the String class, and a few special classes that wrap
             // primitive types: Character, Byte, Short, and Integer.
-            int month = 3;
-            string monthString;
-            switch (month)
-            {
-                case 1:
-                    monthString = "January";
-                    break;
-                case 2:
-                    monthString = "February";
-                    break;
-                case 3:
-                    monthString = "March";
-                    break;
-                // You can assign more than one case to an action
-                // But you can't add an action without a break before another case
-                // (if you want to do this, you would have to explicitly add a goto case x
-                case 6:
-                case 7:
-                case 8:
-                    monthString = "Summer time!!";
-                    break;
-                default:
-                    monthString = "Some other month";
-                    break;
-            }
+            //int month = 3;
+            //string monthString;
+            //switch (month)
+            //{
+            //    case 1:
+            //        monthString = "January";
+            //        break;
+
+            //    case 2:
+            //        monthString = "February";
+            //        break;
+
+            //    case 3:
+            //        monthString = "March";
+            //        break;
+            //    // You can assign more than one case to an action
+            //    // But you can't add an action without a break before another case
+            //    // (if you want to do this, you would have to explicitly add a goto case x
+            //    case 6:
+            //    case 7:
+            //    case 8:
+            //        monthString = "Summer time!!";
+            //        break;
+
+            //    default:
+            //        monthString = "Some other month";
+            //        break;
+            //}
 
             ///////////////////////////////////////
             // Converting Data Types And Typecasting
@@ -330,7 +356,8 @@ on a new line! ""Wow!"", the masses cried";
             // Casting
             // Cast decimal 15 to an int
             // and then implicitly cast to long
-            long x = (int) 15M;
+            long x = (int)15M;
+            Console.WriteLine(x);
         }
 
         ///////////////////////////////////////
@@ -370,14 +397,14 @@ on a new line! ""Wow!"", the masses cried";
         // DEFAULT METHOD SIGNATURES
 
         public // Visibility
-        static // Allows for direct call on class without object
-        int // Return Type,
-        MethodSignatures(
-            int maxCount, // First variable, expects an int
-            int count = 0, // will default the value to 0 if not passed in
-            int another = 3,
-            params string[] otherParams // captures all other parameters passed to method
-        )
+            static // Allows for direct call on class without object
+            int // Return Type,
+            MethodSignatures(
+                int maxCount, // First variable, expects an int
+                int count = 0, // will default the value to 0 if not passed in
+                int another = 3,
+                params string[] otherParams // captures all other parameters passed to method
+            )
         {
             return -1;
         }
@@ -407,7 +434,7 @@ on a new line! ""Wow!"", the masses cried";
         }
 
         // You can narrow down the objects that are passed in
-        public static void IterateAndPrint<T>(T toPrint) where T: IEnumerable<int>
+        public static void IterateAndPrint<T>(T toPrint) where T : IEnumerable<int>
         {
             // We can iterate, since T is a IEnumerable
             foreach (var item in toPrint)
@@ -446,7 +473,7 @@ on a new line! ""Wow!"", the masses cried";
         {
             for (var i = 0; i < limit; i++)
             {
-                if (i > limit/2) yield break;
+                if (i > limit / 2) yield break;
                 yield return i;
             }
         }
@@ -481,6 +508,7 @@ on a new line! ""Wow!"", the masses cried";
 
             // IMPLICITLY TYPED VARIABLES - you can let the compiler work out what the type is:
             var magic = "magic is a string, at compile time, so you still get type safety";
+            Console.WriteLine(magic);
             // magic = 9; will not work as magic is a string, not an int
 
             // GENERICS
@@ -490,7 +518,7 @@ on a new line! ""Wow!"", the masses cried";
             };
 
             // Calling SETDEFAULT defined as a generic above
-            Console.WriteLine(SetDefault<string,string>(phonebook, "Shaun", "No Phone")); // No Phone
+            Console.WriteLine(SetDefault<string, string>(phonebook, "Shaun", "No Phone")); // No Phone
             // nb, you don't need to specify the TKey and TValue since they can be
             // derived implicitly
             Console.WriteLine(SetDefault(phonebook, "Sarah", "No Phone")); // 212 555 5555
@@ -538,7 +566,7 @@ on a new line! ""Wow!"", the masses cried";
             // PARALLEL FRAMEWORK
             // https://devblogs.microsoft.com/csharpfaq/parallel-programming-in-net-framework-4-getting-started/
 
-            var words = new List<string> {"dog", "cat", "horse", "pony"};
+            var words = new List<string> { "dog", "cat", "horse", "pony" };
 
             Parallel.ForEach(words,
                 new ParallelOptions() { MaxDegreeOfParallelism = 4 },
@@ -576,7 +604,7 @@ on a new line! ""Wow!"", the masses cried";
             var sum = bikes.Sum(b => b.Wheels); // Reduce - sums all the wheels in the collection
 
             // Create a list of IMPLICIT objects based on some parameters of the bike
-            var bikeSummaries = bikes.Select(b=>new { Name = b.Name, IsAwesome = !b.IsBroken && b.HasTassles });
+            var bikeSummaries = bikes.Select(b => new { Name = b.Name, IsAwesome = !b.IsBroken && b.HasTassles });
             // Hard to show here, but you get type ahead completion since the compiler can implicitly work
             // out the types above!
             foreach (var bikeSummary in bikeSummaries.Where(b => b.IsAwesome))
@@ -606,11 +634,7 @@ on a new line! ""Wow!"", the masses cried";
             // Now the query runs, but opens a reader, so only populates as you iterate through
             foreach (string bike in query)
                 Console.WriteLine(result);
-
-
-
         }
-
     } // End LearnCSharp class
 
     // You can include other classes in a .cs file
@@ -624,11 +648,11 @@ on a new line! ""Wow!"", the masses cried";
         }
     }
 
-
     // DELEGATES AND EVENTS
     public class DelegateTest
     {
         public static int count = 0;
+
         public static int Increment()
         {
             // increment count then return it
@@ -645,7 +669,7 @@ on a new line! ""Wow!"", the masses cried";
         // Create an event with the delegate type
         public static event IncrementDelegate MyEvent;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Refer to the Increment method by instantiating the delegate
             // and passing the method itself in as an argument
@@ -660,7 +684,6 @@ on a new line! ""Wow!"", the masses cried";
             // composedInc will run Increment 3 times
             Console.WriteLine(composedInc());  // => 4
 
-
             // Subscribe to the event with the delegate
             MyEvent += new IncrementDelegate(Increment);
             MyEvent += new IncrementDelegate(Increment);
@@ -670,7 +693,6 @@ on a new line! ""Wow!"", the masses cried";
             Console.WriteLine(MyEvent());  // => 6
         }
     }
-
 
     // Class Declaration Syntax:
     // <public/private/protected/internal> class <class name>{
@@ -684,14 +706,13 @@ on a new line! ""Wow!"", the masses cried";
         public int Cadence // Public: Can be accessed from anywhere
         {
             get // get - define a method to retrieve the property
-            {
-                return _cadence;
-            }
+                =>
+                    _cadence;
             set // set - define a method to set a property
-            {
-                _cadence = value; // Value is the value passed in to the setter
-            }
+                =>
+                    _cadence = value;
         }
+
         private int _cadence;
 
         protected virtual int Gear // Protected: Accessible from the class and subclasses
@@ -706,13 +727,14 @@ on a new line! ""Wow!"", the masses cried";
             private set; // You can set modifiers on the get/set methods
         }
 
-        int _speed; // Everything is private by default: Only accessible from within this class.
-                    // can also use keyword private
+        private int _speed; // Everything is private by default: Only accessible from within this class.
+
+        // can also use keyword private
         public string Name { get; set; }
-        
+
         // Properties also have a special syntax for when you want a readonly property
         // that simply returns the result of an expression
-        public string LongName => Name + " " + _speed + " speed"; 
+        public string LongName => Name + " " + _speed + " speed";
 
         // Enum is a value type that consists of a set of named constants
         // It is really just mapping a name to a value (an int, unless specified otherwise).
@@ -725,6 +747,7 @@ on a new line! ""Wow!"", the masses cried";
             Electra = 42, //you can explicitly set a value to a name
             Gitane // 43
         }
+
         // We defined this type inside a Bicycle class, so it is a nested type
         // Code outside of this class should reference this type as Bicycle.Brand
 
@@ -756,7 +779,7 @@ on a new line! ""Wow!"", the masses cried";
 
         // readonly values are set at run time
         // they can only be assigned upon declaration or in a constructor
-        readonly bool _hasCardsInSpokes = false; // read-only private
+        private readonly bool _hasCardsInSpokes = false; // read-only private
 
         // Constructors are a way of creating classes
         // This is a default constructor
@@ -772,7 +795,7 @@ on a new line! ""Wow!"", the masses cried";
 
         // This is a specified constructor (it contains arguments)
         public Bicycle(int startCadence, int startSpeed, int startGear,
-                       string name, bool hasCardsInSpokes, BikeBrand brand)
+            string name, bool hasCardsInSpokes, BikeBrand brand)
             : base() // calls base first
         {
             Gear = startGear;
@@ -811,10 +834,11 @@ on a new line! ""Wow!"", the masses cried";
         // when only data needs to be accessed, consider using properties.
         // properties may have either get or set, or both
         private bool _hasTassles; // private variable
+
         public bool HasTassles // public accessor
         {
-            get { return _hasTassles; }
-            set { _hasTassles = value; }
+            get => _hasTassles;
+            set => _hasTassles = value;
         }
 
         // You can also define an automatic property in one line
@@ -836,29 +860,25 @@ on a new line! ""Wow!"", the masses cried";
         // All though this is not entirely useful in this example, you
         // could do bicycle[0] which returns "chris" to get the first passenger or
         // bicycle[1] = "lisa" to set the passenger. (of this apparent quattrocycle)
-        private string[] passengers = { "chris", "phil", "darren", "regina" };
+        private readonly string[] passengers = { "chris", "phil", "darren", "regina" };
 
         public string this[int i]
         {
-            get {
-                return passengers[i];
-            }
+            get => passengers[i];
 
-            set {
-                passengers[i] = value;
-            }
+            set => passengers[i] = value;
         }
 
         // Method to display the attribute values of this Object.
         public virtual string Info()
         {
             return "Gear: " + Gear +
-                    " Cadence: " + Cadence +
-                    " Speed: " + _speed +
-                    " Name: " + Name +
-                    " Cards in Spokes: " + (_hasCardsInSpokes ? "yes" : "no") +
-                    "\n------------------------------\n"
-                    ;
+                   " Cadence: " + Cadence +
+                   " Speed: " + _speed +
+                   " Name: " + Name +
+                   " Cards in Spokes: " + (_hasCardsInSpokes ? "yes" : "no") +
+                   "\n------------------------------\n"
+                ;
         }
 
         // Methods can also be static. It can be useful for helper methods
@@ -867,12 +887,10 @@ on a new line! ""Wow!"", the masses cried";
             // Within a static method, we only can reference static class members
             return BicyclesCreated > 9000;
         } // If your class only needs static members, consider marking the class itself as static.
-
-
     } // end class Bicycle
 
     // PennyFarthing is a subclass of Bicycle
-    class PennyFarthing : Bicycle
+    internal class PennyFarthing : Bicycle
     {
         // (Penny Farthings are those bicycles with the big front wheel.
         // They have no gears.)
@@ -885,14 +903,8 @@ on a new line! ""Wow!"", the masses cried";
 
         protected override int Gear
         {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-                throw new InvalidOperationException("You can't change gears on a PennyFarthing");
-            }
+            get => 0;
+            //set => throw new InvalidOperationException("You can't change gears on a PennyFarthing");
         }
 
         public static PennyFarthing CreateWithGears(int gears)
@@ -911,34 +923,28 @@ on a new line! ""Wow!"", the masses cried";
     }
 
     // Interfaces only contain signatures of the members, without the implementation.
-    interface IJumpable
+    internal interface IJumpable
     {
         void Jump(int meters); // all interface members are implicitly public
     }
 
-    interface IBreakable
+    internal interface IBreakable
     {
         bool Broken { get; } // interfaces can contain properties as well as methods & events
     }
 
     // Classes can inherit only one other class, but can implement any amount of interfaces,
     // however the base class name must be the first in the list and all interfaces follow
-    class MountainBike : Bicycle, IJumpable, IBreakable
+    internal class MountainBike : Bicycle, IJumpable, IBreakable
     {
-        int damage = 0;
+        private int _damage = 0;
 
         public void Jump(int meters)
         {
-            damage += meters;
+            _damage += meters;
         }
 
-        public bool Broken
-        {
-            get
-            {
-                return damage > 100;
-            }
-        }
+        public bool Broken => _damage > 100;
     }
 
     /// <summary>
@@ -978,10 +984,21 @@ on a new line! ""Wow!"", the masses cried";
     // Program using the partial class "A"
     public class Program
     {
-        static void Main()
+        private static void Main()
         {
+            Console.Beep();
+            Rectangle rect = new Rectangle { Length = 5, Width = 3 };
+            Console.WriteLine($"The length is {rect.Length} and the width is {rect.Width}");
+
+            string username = "User";
+            Console.WriteLine($@"C:\Users\{username}\Desktop");
+
             A.A1();
             A.A2();
+            LearnCSharp.Classes();
+            LearnCSharp.Syntax();
+
+            Console.WriteLine();
         }
     }
 
@@ -994,20 +1011,8 @@ on a new line! ""Wow!"", the masses cried";
         public int Width { get; set; }
     }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Rectangle rect = new Rectangle { Length = 5, Width = 3 };
-            Console.WriteLine($"The length is {rect.Length} and the width is {rect.Width}");
-
-            string username = "User";
-            Console.WriteLine($@"C:\Users\{username}\Desktop");
-        }
-    }
-
     // New C# 6 features
-    class GlassBall : IJumpable, IBreakable
+    internal class GlassBall : IJumpable, IBreakable
     {
         // Autoproperty initializers
         public int Damage { get; private set; } = 0;
@@ -1049,7 +1054,7 @@ on a new line! ""Wow!"", the masses cried";
             => GenieName?.ToUpper();
     }
 
-    static class MagicService
+    internal static class MagicService
     {
         private static bool LogException(Exception ex)
         {
@@ -1065,16 +1070,16 @@ on a new line! ""Wow!"", the masses cried";
                 throw new MagicServiceException("Spell failed", 42);
 
                 // Spell succeeded
-                return true;
+                //return true;
             }
             // Only catch if Code is 42 i.e. spell failed
-            catch(MagicServiceException ex) when (ex.Code == 42)
+            catch (MagicServiceException ex) when (ex.Code == 42)
             {
                 // Spell failed
                 return false;
             }
-            // Other exceptions, or MagicServiceException where Code is not 42 
-            catch(Exception ex) when (LogException(ex))
+            // Other exceptions, or MagicServiceException where Code is not 42
+            catch (Exception ex) when (LogException(ex))
             {
                 // Execution never reaches this block
                 // The stack is not unwound
@@ -1096,7 +1101,8 @@ on a new line! ""Wow!"", the masses cried";
         }
     }
 
-    public static class PragmaWarning {
+    public static class PragmaWarning
+    {
         // Obsolete attribute
         [Obsolete("Use NewMethod instead", false)]
         public static void ObsoleteMethod()
@@ -1111,24 +1117,21 @@ on a new line! ""Wow!"", the masses cried";
 
         public static void Main()
         {
+#pragma warning disable CS0618
             ObsoleteMethod(); // CS0618: 'ObsoleteMethod is obsolete: Use NewMethod instead'
 #pragma warning disable CS0618
             ObsoleteMethod(); // no warning
-#pragma warning restore CS0618
+            //#pragma warning restore CS0618
             ObsoleteMethod(); // CS0618: 'ObsoleteMethod is obsolete: Use NewMethod instead'
         }
     }
-} // End Namespace
 
-using System;
 // C# 6, static using
-using static System.Math;
+    //using static System.Math;
 
-namespace Learning.More.CSharp
-{
-    class StaticUsing
+    internal class StaticUsing
     {
-        static void Main()
+        private static void Main()
         {
             // Without a static using statement..
             Console.WriteLine("The square root of 4 is {}.", Math.Sqrt(4));
@@ -1136,16 +1139,9 @@ namespace Learning.More.CSharp
             Console.WriteLine("The square root of 4 is {}.", Sqrt(4));
         }
     }
-}
 
-// New C# 7 Feature
-// Install Microsoft.Net.Compilers Latest from Nuget
-// Install System.ValueTuple Latest from Nuget
-using System;
-namespace Csharp7
-{
     // TUPLES, DECONSTRUCTION AND DISCARDS
-    class TuplesTest
+    internal class TuplesTest
     {
         public (string, string) GetName()
         {
@@ -1158,7 +1154,7 @@ namespace Csharp7
             (string FirstName, string LastName) names2 = ("Peter", "Parker");
 
             // Type 2 Declaration
-            var names3 = (First:"Peter", Last:"Parker");
+            var names3 = (First: "Peter", Last: "Parker");
 
             Console.WriteLine(names2.FirstName);  // => Peter
             Console.WriteLine(names3.Last);  // => Parker
@@ -1166,7 +1162,8 @@ namespace Csharp7
             return names3;
         }
 
-        public string GetLastName() {
+        public string GetLastName()
+        {
             var fullName = GetName();
 
             // Tuples can be deconstructed
@@ -1180,6 +1177,7 @@ namespace Csharp7
         // Any type can be deconstructed in the same way by
         // specifying a Deconstruct method
         public int randomNumber = 4;
+
         public int anotherRandomNumber = 10;
 
         public void Deconstruct(out int randomNumber, out int anotherRandomNumber)
@@ -1188,7 +1186,7 @@ namespace Csharp7
             anotherRandomNumber = this.anotherRandomNumber;
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var tt = new TuplesTest();
             (int num1, int num2) = tt;
@@ -1197,25 +1195,30 @@ namespace Csharp7
             Console.WriteLine(tt.GetLastName());
         }
     }
-    
+
     // PATTERN MATCHING
-    class PatternMatchingTest
+    internal class PatternMatchingTest
     {
         public static (string, int)? CreateLogMessage(object data)
         {
-            switch(data)
+            switch (data)
             {
                 // Additional filtering using when
                 case System.Net.Http.HttpRequestException h when h.Message.Contains("404"):
                     return (h.Message, 404);
+
                 case System.Net.Http.HttpRequestException h when h.Message.Contains("400"):
                     return (h.Message, 400);
+
                 case Exception e:
                     return (e.Message, 500);
+
                 case string s:
                     return (s, s.Contains("Error") ? 500 : 200);
+
                 case null:
                     return null;
+
                 default:
                     return (data.ToString(), 500);
             }
@@ -1224,14 +1227,15 @@ namespace Csharp7
 
     // REFERENCE LOCALS
     // Allow you to return a reference to an object instead of just its value
-    class RefLocalsTest
+    internal class RefLocalsTest
     {
         // note ref in return
         public static ref string FindItem(string[] arr, string el)
         {
-            for(int i=0; i<arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                if(arr[i] == el) {
+                if (arr[i] == el)
+                {
                     // return the reference
                     return ref arr[i];
                 }
@@ -1241,7 +1245,7 @@ namespace Csharp7
 
         public static void SomeMethod()
         {
-            string[] arr = {"this", "is", "an", "array"};
+            string[] arr = { "this", "is", "an", "array" };
 
             // note refs everywhere
             ref string item = ref FindItem(arr, "array");
@@ -1251,10 +1255,11 @@ namespace Csharp7
     }
 
     // LOCAL FUNCTIONS
-    class LocalFunctionTest
+    internal class LocalFunctionTest
     {
         private static int _id = 0;
         public int id;
+
         public LocalFunctionTest()
         {
             id = generateId();
@@ -1272,10 +1277,8 @@ namespace Csharp7
             var lf2 = new LocalFunctionTest();
             Console.WriteLine($"{lf1.id}, {lf2.id}");  // => 0, 1
 
-            int id = generateId();
+            //int id = generateId();
             // error CS0103: The name 'generateId' does not exist in the current context
         }
     }
 }
-
-
