@@ -77,5 +77,10 @@ namespace Thing_While_Clarke_Was_Gone
                 RNG2 = card;
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Console.Beep();
+        }
     }
 }
