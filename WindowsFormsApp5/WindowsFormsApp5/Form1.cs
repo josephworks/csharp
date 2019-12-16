@@ -16,16 +16,28 @@ namespace WindowsFormsApp5
         public Form1()
         {
             InitializeComponent();
+            int r, c;
+            GetRowCol(textBox21, out r, out c);
         }
         public void fillArray()
         {
             int r = 0;
             int c = 0;
-            foreach(Control x in this.Controls)
+            foreach (Control x in this.Controls)
             {
                 if (x is TextBox)
                 {
 
+                }
+            }
+        }
+        public void clearBoard()
+        {
+            foreach (Control x in this.Controls)
+            {
+                if (x is TextBox)
+                {
+                    x.Text = "";
                 }
             }
         }
@@ -39,6 +51,9 @@ namespace WindowsFormsApp5
             {
                 int.TryParse(num.Substring(0, 1), out pos);
             }
+            pos--;
+            row = pos / 9;
+            col = pos % 9;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +69,14 @@ namespace WindowsFormsApp5
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Run(new AboutBox());
+        }
+
+        private void resetbutton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 81; i++)
+            {
+                clearBoard();
+            }
         }
     }
 }

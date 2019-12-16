@@ -30,5 +30,12 @@ namespace WindowsFormsApp5
             m_nums[num] = val;
             return true;
         }
+        public void isValid()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+
+            }
+        }
     }
 }
