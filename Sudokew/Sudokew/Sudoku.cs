@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp5
+namespace Sudokew
 {
     class Sudoku
     {
@@ -21,6 +21,13 @@ namespace WindowsFormsApp5
             m_nums[7] = n8;
             m_nums[8] = n9;
         }
+        public Sudoku(int[] nums)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                m_nums[i] = nums[i];
+            }
+        }
         public Boolean Place(int num, int val)
         {
             if (m_nums.Contains(val) || m_nums[num] != 0)
@@ -28,6 +35,18 @@ namespace WindowsFormsApp5
                 return false;
             }
             m_nums[num] = val;
+            return true;
+        }
+        public Boolean isValid()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = i++; j < 9; j++)
+                {
+                    if (m_nums[i] == m_nums[j])
+                        return false;
+                }
+            }
             return true;
         }
     }
