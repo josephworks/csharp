@@ -8,7 +8,11 @@ namespace ChessGame
 {
     class bishop : ChessPiece
     {
+<<<<<<< HEAD
+        public Bishop(Piece p, C c) : base(Piece.eBISHOP, c)
+=======
         public bishop(Color c,ChessSquare s) : base(Piece.eBISHOP, c,s)
+>>>>>>> b7b7d359f0f228ef61f60ba84c31ae0deb9c1124
         {
             if (c == Color.eWHITE)
             {

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sudokew
@@ -16,16 +9,40 @@ namespace Sudokew
         public Form1()
         {
             InitializeComponent();
+            fillArray();
+            Console.Beep();
         }
         public void fillArray()
         {
             int r = 0;
             int c = 0;
-            foreach(Control x in this.Controls)
+            foreach (Control x in this.Controls)
             {
                 if (x is TextBox)
                 {
-
+                    m_vals[r, c++] = (TextBox)x;
+                    if (c == 9)
+                    {
+                        c = 0;
+                        r++;
+                    }
+                }
+            }
+        }
+        public void clearBoard()
+        {
+            /*foreach (Control x in this.Controls)
+            {
+                if (x is TextBox)
+                {
+                    x.Text = "";
+                }
+            }*/
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    m_vals[i, j].Text = "";
                 }
             }
         }
@@ -39,6 +56,9 @@ namespace Sudokew
             {
                 int.TryParse(num.Substring(0, 1), out pos);
             }
+            pos--;
+            row = pos / 9;
+            col = pos % 9;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,12 +68,95 @@ namespace Sudokew
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Console.Beep();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Run(new AboutBox());
+        }
+
+        private void resetbutton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 81; i++)
+            {
+                clearBoard();
+            }
+        }
+
+        int getVal(int r, int c)
+        {
+            int v = 0;
+            v = int.Parse(m_vals[r, c].Text);
+            return v;
+        }
+
+        private void textBox55_TextChanged(object sender, EventArgs e)
+        {
+            if (((TextBox)sender).Text == "")
+            {
+                return;
+            }
+            int row;
+            int col;
+            string val = ((TextBox)sender).Text;
+            GetRowCol(((TextBox)sender), out row, out col);
+            //check row
+            int[] bro = new int[9];
+            for (int i = 0; i < 9; i++)
+            {
+                bro[i] = getVal(row, i);
+            }
+            Sudoku r = new Sudoku(bro);
+
+            //check column
+            int[] orb = new int[9];
+            for (int i = 0; i < 9; i++)
+            {
+                orb[i] = getVal(i, col);
+            }
+            Sudoku c = new Sudoku(orb);
+
+            //check square
+            int[] sq = new int[9];
+            int x = row / 3;
+            int y = col / 3;
+            int z = 0;
+            for (int i = x; i < x + 3; i++)
+            {
+                for (int j = y; j < y + 3; j++)
+                {
+                    sq[z++] = getVal(i, j);
+                }
+            }
+            Sudoku s = new Sudoku(sq);
+
+            if (r.isValid() && c.isValid() && s.isValid())
+            {
+                //its valid
+            }
+            else
+            {
+                ((TextBox)sender).Text = "";
+            }
+        }
+
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AboutBox about = new AboutBox();
+            about.ShowDialog();
+        }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 81; i++)
+            {
+                clearBoard();
+            }
         }
     }
 }
