@@ -18,7 +18,7 @@ namespace Beep
             {
                 Console.Beep();
                 Console.WriteLine("Hello World!");
-                //ReadLine();
+                ReadLine();
             }
         }
     }
