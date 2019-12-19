@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp5
+﻿namespace Sudokew
 {
     partial class Form1
     {
