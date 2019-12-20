@@ -90,7 +90,7 @@ task main()
 		turnLEDOn(loadingled6);
 		wait(1);
 		turnLEDOn(loadingled7);
-		wait(1);
+		untilTouch(touchsensor);
 		turnLEDOn(loadingled8);
 		turnLEDOn(greenled);
 		stopMotor(MOTOR);
