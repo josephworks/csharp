@@ -12,6 +12,7 @@ namespace Sudokew
             fillArray();
             Console.Beep();
         }
+        // Connect text boxes to array
         public void fillArray()
         {
             int r = 0;
@@ -20,24 +21,14 @@ namespace Sudokew
             {
                 if (x is TextBox)
                 {
-                    m_vals[r, c++] = (TextBox)x;
-                    if (c == 9)
-                    {
-                        c = 0;
-                        r++;
-                    }
+                    GetRowCol((TextBox) x,out r,out c);
+                    m_vals[r, c] = (TextBox)x;
                 }
             }
         }
         public void clearBoard()
         {
-            /*foreach (Control x in this.Controls)
-            {
-                if (x is TextBox)
-                {
-                    x.Text = "";
-                }
-            }*/
+
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -54,11 +45,12 @@ namespace Sudokew
             int.TryParse(num, out pos);
             if (pos == 0)
             {
-                int.TryParse(num.Substring(0, 1), out pos);
+                int.TryParse(num.Substring(1, 1), out pos);
             }
             pos--;
             row = pos / 9;
             col = pos % 9;
+            
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,25 +69,24 @@ namespace Sudokew
 
         private void resetbutton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 81; i++)
-            {
-                clearBoard();
-            }
+            clearBoard();
         }
 
         int getVal(int r, int c)
         {
+            if (m_vals[r, c].Text == "")
+                return 0;
             int v = 0;
             v = int.Parse(m_vals[r, c].Text);
             return v;
         }
 
-        private void textBox55_TextChanged(object sender, EventArgs e)
+        private void textBox_TextChanged(object sender, EventArgs e)
         {
+            // Don't do anything if it's empty
             if (((TextBox)sender).Text == "")
-            {
                 return;
-            }
+
             int row;
             int col;
             string val = ((TextBox)sender).Text;
@@ -153,10 +144,7 @@ namespace Sudokew
 
         private void resetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 81; i++)
-            {
-                clearBoard();
-            }
+            clearBoard();
         }
     }
 }

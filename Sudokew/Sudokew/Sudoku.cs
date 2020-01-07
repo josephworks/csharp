@@ -37,13 +37,14 @@ namespace Sudokew
             m_nums[num] = val;
             return true;
         }
+        //  Make sure no numbers appear twice
         public Boolean isValid()
         {
             for (int i = 0; i < 9; i++)
             {
-                for (int j = i++; j < 9; j++)
+                for (int j = i+1; j < 9; j++)
                 {
-                    if (m_nums[i] == m_nums[j])
+                    if (m_nums[i] == m_nums[j]  && m_nums[i] != 0)
                         return false;
                 }
             }
