@@ -1,24 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ChessGame
 {
     class King : ChessPiece
     {
+<<<<<<< HEAD
+        public King(Piece p, C c) : base(Piece.eKING, c)
+        {
+            if (c == C.eWHITE)
+            {
+=======
         public King(Color c,ChessSquare s) : base(Piece.eKING, c,s)
         {
             if (c == Color.eWHITE)
             {
 
+>>>>>>> b7b7d359f0f228ef61f60ba84c31ae0deb9c1124
                 m_image = ChessGame.Properties.Resources.King_White;
             }
             else
             {
                 m_image = ChessGame.Properties.Resources.King_Black;
             }
+<<<<<<< HEAD
+=======
             
         }
         public override ChessSquare[] GetSquares()
@@ -38,6 +49,7 @@ namespace ChessGame
             move[6] = b.GetSquare(m_square.GetRow()+1, m_square.GetColumn());
             move[7] = b.GetSquare(m_square.GetRow()-1, m_square.GetColumn());
             return null;
+>>>>>>> b7b7d359f0f228ef61f60ba84c31ae0deb9c1124
         }
     }
 }

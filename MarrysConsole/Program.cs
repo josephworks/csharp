@@ -62,19 +62,19 @@ namespace MarrysConsole
         protected enum Tone
         {
             REST = 0,
-            GbelowC = 3196,
-            A = 3220,
-            Asharp = 3233,
-            B = 3247,
-            C = 3262,
-            Csharp = 3277,
-            D = 3294,
-            Dsharp = 3311,
-            E = 3330,
-            F = 3349,
-            Fsharp = 3370,
-            G = 3392,
-            Gsharp = 3415,
+            GbelowC = 2196,
+            A = 2220,
+            Asharp = 2233,
+            B = 2247,
+            C = 2262,
+            Csharp = 2277,
+            D = 2294,
+            Dsharp = 2311,
+            E = 2330,
+            F = 2349,
+            Fsharp = 2370,
+            G = 2392,
+            Gsharp = 2415,
             //Needs tuning, change 1 at the beginning to change frequency by on khz
         }
 
