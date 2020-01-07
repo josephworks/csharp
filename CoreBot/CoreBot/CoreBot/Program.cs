@@ -3,6 +3,7 @@
 //
 // Generated with Bot Builder V4 SDK Template for Visual Studio CoreBot v4.6.2
 
+using System;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
@@ -13,6 +14,7 @@ namespace CoreBot
     {
         public static void Main(string[] args)
         {
+            Console.Beep();
             CreateWebHostBuilder(args).Build().Run();
         }
 

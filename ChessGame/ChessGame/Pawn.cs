@@ -8,7 +8,11 @@ namespace ChessGame
 {
     class Pawn : ChessPiece
     {
+<<<<<<< HEAD
+        public Pawn(Piece p, C c) : base(Piece.ePAWN, c)
+=======
         public Pawn(Piece p, Color c, ChessSquare s) : base(Piece.ePAWN, c, s)
+>>>>>>> b7b7d359f0f228ef61f60ba84c31ae0deb9c1124
         {
             if (c == Color.eWHITE)
             {
