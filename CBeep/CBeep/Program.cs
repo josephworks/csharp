@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace CBeep
 {
@@ -10,13 +11,13 @@ namespace CBeep
     {
         static void Main(string[] args)
         {
-            beepclass b = new beepclass();
+            Beepclass b = new Beepclass();
             b.Beep();
-            Console.ReadKey();
+            ReadKey();
             b.MultiBeep(5);
-            Console.ReadKey();
-            b.SuperBeep(5,5);
-            Console.ReadKey();
+            ReadKey();
+            b.SuperBeep(2500,5);
+            ReadKey();
         }
     }
 }
