@@ -1,0 +1,11 @@
+C:\Users\gcep650\source\repos\DBTest\DBTest\bin\Debug\ebooksDB.mdb
+C:\Users\gcep650\source\repos\DBTest\DBTest\bin\Debug\DBTest.exe.config
+C:\Users\gcep650\source\repos\DBTest\DBTest\bin\Debug\DBTest.exe
+C:\Users\gcep650\source\repos\DBTest\DBTest\bin\Debug\DBTest.pdb
+C:\Users\gcep650\source\repos\DBTest\DBTest\obj\Debug\DBTest.csprojAssemblyReference.cache
+C:\Users\gcep650\source\repos\DBTest\DBTest\obj\Debug\DBTest.Form1.resources
+C:\Users\gcep650\source\repos\DBTest\DBTest\obj\Debug\DBTest.Properties.Resources.resources
+C:\Users\gcep650\source\repos\DBTest\DBTest\obj\Debug\DBTest.csproj.GenerateResource.cache
+C:\Users\gcep650\source\repos\DBTest\DBTest\obj\Debug\DBTest.exe
+C:\Users\gcep650\source\repos\DBTest\DBTest\obj\Debug\DBTest.pdb
+C:\Users\gcep650\source\repos\DBTest\DBTest\obj\Debug\DBTest.Form2.resources
