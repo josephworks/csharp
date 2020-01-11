@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Sudokew")]
 [assembly: AssemblyCopyright("Copyright JosephWorks©  2019 - Copyright TylerMedina©  2019")]
-[assembly: AssemblyTrademark("SudowkewGameByTylerAndMaintainedByJoseph")]
+[assembly: AssemblyTrademark("SudowkewGameByTylerAndGabeAndMaintainedByJoseph")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
