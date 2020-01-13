@@ -62,11 +62,6 @@ namespace Sudokew
             Console.Beep();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Run(new AboutBox());
-        }
-
         private void resetbutton_Click(object sender, EventArgs e)
         {
             clearBoard();

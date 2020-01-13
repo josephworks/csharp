@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DBTest
 {
-    public partial class Form2 : Form
+    public partial class Form1 : Form
     {
         ComboBox[,] m_vals = new ComboBox[9, 9];
-        public Form2()
+        public Form1()
         {
             InitializeComponent();
             foreach (System.Windows.Forms.Control c in this.tableLayoutPanel1.Controls)
