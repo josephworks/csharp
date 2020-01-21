@@ -12,6 +12,8 @@ namespace Interfaces
         {
             SpaceShip s = new SpaceShip();
 
+            //Console.Beep(2000, 3000);
+
             s.Up();
             s.Up();
 
