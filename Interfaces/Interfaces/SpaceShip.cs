@@ -28,7 +28,22 @@ namespace Interfaces
             throw new NotImplementedException();
         }
 
-        public bool Fire()
+        public bool A()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool B()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Select()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Start()
         {
             throw new NotImplementedException();
         }

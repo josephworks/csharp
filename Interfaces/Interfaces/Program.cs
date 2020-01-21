@@ -10,6 +10,21 @@ namespace Interfaces
     {
         static void Main(string[] args)
         {
+            SpaceShip s = new SpaceShip();
+
+            s.Up();
+            s.Up();
+
+            s.Down();
+            s.Down();
+
+            s.Left();
+
+            s.Right();
+
+            s.A();
+
+            s.B();
         }
     }
 }

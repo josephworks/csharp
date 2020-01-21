@@ -12,6 +12,9 @@ namespace Interfaces
         Boolean Down();
         Boolean Left();
         Boolean Right();
-        Boolean Fire();
+        Boolean A();
+        Boolean B();
+        Boolean Select();
+        Boolean Start();
     }
 }
