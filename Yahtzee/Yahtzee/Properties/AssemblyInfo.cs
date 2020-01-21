@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("JosephWorks")]
 [assembly: AssemblyProduct("Yahtzee")]
-[assembly: AssemblyCopyright("Copyright JosephWorks ©  2019")]
+[assembly: AssemblyCopyright("Copyright JosephWorks ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sudokew
 {
@@ -28,14 +25,29 @@ namespace Sudokew
                 m_nums[i] = nums[i];
             }
         }
-        public Boolean Place(int num, int val)
+        public bool place(int num, int val)
         {
-            if (m_nums.Contains(val) || m_nums[num] != 0)
-            {
-                return false;
-            }
+            if (val > 9 || val < 1 || num > 8 || num < 0) { return false; }
+            if (m_nums.Contains(val)) { return false; }
+            if (m_nums[num] != 0) { return false; }
             m_nums[num] = val;
             return true;
+        }
+
+        public bool place(int val)
+        {
+            if (val > 9 || val < 1) { return false; }
+            if (contains(val)) { return false; }
+            return true;
+        }
+        public bool contains(int val)
+        {
+            int count = 0;
+            for (int i = 0; i < m_nums.Length; i++)
+            {
+                if (m_nums[i] == val) { count++; }
+            }
+            return count >= 2;
         }
         //  Make sure no numbers appear twice
         public Boolean isValid()
