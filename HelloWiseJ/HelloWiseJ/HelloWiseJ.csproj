@@ -58,6 +58,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Desktop1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Desktop1.Designer.cs">
+      <DependentUpon>Desktop1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Window1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Desktop1.resx">
+      <DependentUpon>Desktop1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Window1.resx">
       <DependentUpon>Window1.cs</DependentUpon>
     </EmbeddedResource>
