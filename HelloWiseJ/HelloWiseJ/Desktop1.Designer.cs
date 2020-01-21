@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = Wisej.Web.AutoScaleMode.Font;
             this.Name = "Desktop1";
-            this.Size = new System.Drawing.Size(1179, 468);
+            this.Size = new System.Drawing.Size(1297, 664);
             this.ResumeLayout(false);
 
         }
