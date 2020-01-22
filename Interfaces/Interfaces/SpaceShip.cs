@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class SpaceShip : IJoystick
+    internal class SpaceShip : IJoystick
     {
         private int m_sequence;
+
         public bool Up()
         {
             if (m_sequence == 0 || m_sequence == 1)
