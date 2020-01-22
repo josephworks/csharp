@@ -32,7 +32,7 @@ namespace ModalWorkflow
 		}
 
 
-		private UserData UserData = new UserData();
+		private new UserData UserData = new UserData();
 
 
 		private void buttonOK_Click(object sender, EventArgs e)

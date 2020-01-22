@@ -16,7 +16,7 @@ namespace ModalWorkflow
 			this.UserData = (UserData)userData.Clone();
 		}
 
-		public UserData UserData { get; set; }
+		public new UserData UserData { get; set; }
 
 		private void UserDataDialog_Load(object sender, EventArgs e)
 		{
