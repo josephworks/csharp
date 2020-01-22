@@ -5,6 +5,9 @@
 [submodule "ConsoleGames"]
 	path = ConsoleGames
 	url = https://github.com/NikolayIT/CSharpConsoleGames
+[submodule "CSharpConsoleGames"]
+	path = CSharpConsoleGames
+	url = https://github.com/NikolayIT/CSharpConsoleGames
 [submodule "Quantum"]
 	path = Quantum
 	url = https://github.com/microsoft/Quantum
