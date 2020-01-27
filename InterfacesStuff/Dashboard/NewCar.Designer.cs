@@ -60,18 +60,19 @@
             this.label1.Location = new System.Drawing.Point(13, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 21);
+            this.label1.Size = new System.Drawing.Size(196, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Car make and model:";
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(469, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(469, 40);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -79,7 +80,7 @@
             // 
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(174, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(229, 37);
             this.toolStripLabel1.Text = "Create a new car";
             // 
             // toolStripButton1
@@ -88,7 +89,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 30);
+            this.toolStripButton1.Size = new System.Drawing.Size(37, 37);
             this.toolStripButton1.Text = "Exit";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -96,7 +97,7 @@
             // 
             this.nameTB.Location = new System.Drawing.Point(177, 30);
             this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(280, 29);
+            this.nameTB.Size = new System.Drawing.Size(280, 34);
             this.nameTB.TabIndex = 3;
             this.nameTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -106,7 +107,7 @@
             this.label2.Location = new System.Drawing.Point(13, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 21);
+            this.label2.Size = new System.Drawing.Size(156, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "Miles Per Gallon:";
             // 
@@ -114,7 +115,7 @@
             // 
             this.mpgTB.Location = new System.Drawing.Point(177, 65);
             this.mpgTB.Name = "mpgTB";
-            this.mpgTB.Size = new System.Drawing.Size(280, 29);
+            this.mpgTB.Size = new System.Drawing.Size(280, 34);
             this.mpgTB.TabIndex = 5;
             this.mpgTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -124,7 +125,7 @@
             this.label3.Location = new System.Drawing.Point(13, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 21);
+            this.label3.Size = new System.Drawing.Size(135, 28);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tank Capacity:";
             // 
@@ -132,13 +133,13 @@
             // 
             this.capTB.Location = new System.Drawing.Point(177, 100);
             this.capTB.Name = "capTB";
-            this.capTB.Size = new System.Drawing.Size(280, 29);
+            this.capTB.Size = new System.Drawing.Size(280, 34);
             this.capTB.TabIndex = 7;
             this.capTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // NewCar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 195);
             this.Controls.Add(this.capTB);
@@ -155,6 +156,7 @@
             this.MaximizeBox = false;
             this.Name = "NewCar";
             this.Text = "New Car";
+            this.Load += new System.EventHandler(this.NewCar_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

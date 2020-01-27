@@ -47,5 +47,10 @@ namespace Dashboard
                 button1.Enabled = true;
             }
         }
+
+        private void NewCar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
