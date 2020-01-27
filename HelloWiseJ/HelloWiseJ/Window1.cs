@@ -17,8 +17,6 @@ namespace HelloWorld
 		{
 			// load the enumeration in the combobox.
 			this.comboBox1.Items.AddRange(Enum.GetNames(typeof(ContentAlignment)));
-			Desktop1 desktop = new Desktop1();
-			desktop.Show();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
