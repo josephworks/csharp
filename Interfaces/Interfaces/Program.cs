@@ -1,30 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             SpaceShip s = new SpaceShip();
 
-            s.Up();
-            s.Up();
+            //Console.Beep(2000, 3000);
 
-            s.Down();
-            s.Down();
+            //s.Up();
+            //s.Up();
 
-            s.Left();
+            //s.Down();
+            //s.Down();
 
-            s.Right();
+            //s.Left();
 
-            s.A();
+            //s.Right();
 
-            s.B();
+            //s.A();
+
+            //s.B();
+
+            IAccount a = new MyAccount();
+            Console.WriteLine(a.GetBalance());
+            a.Deposit(100);
+            Console.WriteLine(a.GetBalance());
+            a.Withdraw(50);
+            Console.WriteLine(a.GetBalance());
+            a.Withdraw(60);
+            Console.WriteLine(a.GetBalance());
+            Console.ReadLine();
         }
     }
 }

@@ -13,6 +13,8 @@ namespace HelloWorld
 		{
 			Window1 window = new Window1();
 			window.Show();
+			Desktop1 desktop = new Desktop1();
+			desktop.Show();
 			Beep();
 		}
 
