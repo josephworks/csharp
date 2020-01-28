@@ -6,51 +6,49 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class SpaceShip : IJoystick
+    class MyCar : ICarInterface
     {
-        int m_sequence;
-
-
-        public bool Up()
-        {
-            if (m_sequence == 0 || m_sequence == 1)
-            { m_sequence++; }
-            else
-                m_sequence = 0;
-            return false;
-        }
-
-        public bool Down()
+        public void drive(int minutes)
         {
             throw new NotImplementedException();
         }
 
-        public bool Left()
+        public void fill(int gals)
         {
             throw new NotImplementedException();
         }
 
-        public bool Right()
+        public double gasLeft()
         {
             throw new NotImplementedException();
         }
 
-        public bool A()
+        public string getName()
         {
             throw new NotImplementedException();
         }
 
-        public bool B()
+        public int getSpeed()
         {
             throw new NotImplementedException();
         }
 
-        public bool Select()
+        public void setMPG(int mpg)
         {
             throw new NotImplementedException();
         }
 
-        public bool Start()
+        public void setName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setSpeed(int speed)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setTankCapacity(int gals)
         {
             throw new NotImplementedException();
         }

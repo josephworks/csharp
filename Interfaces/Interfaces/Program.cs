@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace Interfaces
 {
@@ -22,9 +23,20 @@ namespace Interfaces
 
             s.Right();
 
+            s.Left();
+
+            s.Right();
+
+            s.B();
+
             s.A();
 
             s.B();
+
+            s.A();
+
+            s.Start();
+
         }
     }
 }
