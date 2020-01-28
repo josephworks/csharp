@@ -43,7 +43,7 @@
             this.aGauge1.BaseArcSweep = 270;
             this.aGauge1.BaseArcWidth = 2;
             this.aGauge1.Center = new System.Drawing.Point(100, 100);
-            this.aGauge1.Location = new System.Drawing.Point(194, 210);
+            this.aGauge1.Location = new System.Drawing.Point(12, 31);
             this.aGauge1.MaxValue = 400F;
             this.aGauge1.MinValue = -100F;
             this.aGauge1.Name = "aGauge1";
