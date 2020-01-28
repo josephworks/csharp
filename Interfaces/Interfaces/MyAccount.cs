@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class MyAccount
+    internal class MyAccount : IAccount
     {
-        double m_balance;
-        public void deposit(double amount)
+        private double _mBalance;
+
+        public double GetBalance() => _mBalance;
+
+        void IAccount.Deposit(double amount)
         {
-            m_balance += amount;
+            if (amount <= 0) throw new ArgumentOutOfRangeException(nameof(amount));
+            _mBalance += amount;
         }
 
-        public double getBalance()
+        void IAccount.Withdraw(double amount)
         {
-            return m_balance;
+            _mBalance = _mBalance - amount;
+            if (_mBalance < 0) _mBalance -= 20;
         }
     }
 }
