@@ -74,7 +74,7 @@
             this.aGauge1.ScaleNumbersStepScaleLines = 1;
             this.aGauge1.Size = new System.Drawing.Size(205, 180);
             this.aGauge1.TabIndex = 0;
-            this.aGauge1.Text = "aGauge1";
+            this.aGauge1.Text = "Speed";
             this.aGauge1.Value = 0F;
             // 
             // menuStrip1
