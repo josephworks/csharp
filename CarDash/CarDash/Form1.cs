@@ -26,7 +26,7 @@ namespace Dashboard
             gasBar.Maximum = (int)m_car.getCapacity();
             gasBar.Value = (int)m_car.gasLeft();
             aGauge2.MaxValue = (int)m_car.getCapacity();
-            aGauge2.MaxValue = (int)m_car.gasLeft();s
+            aGauge2.MaxValue = (int)m_car.gasLeft();
             speedBar.Value = m_car.getSpeed();
             aGauge1.Value = m_car.getSpeed();
             if (m_car.gasLeft() < 2) { gasLight.Visible = true; }
@@ -51,7 +51,7 @@ namespace Dashboard
         {
             try
             {
-            m_car.drive(int.Parse(minTB.Text));
+                m_car.drive(int.Parse(minTB.Text));
             }
             catch (FormatException)
             {
@@ -64,7 +64,7 @@ namespace Dashboard
         {
             try
             {
-            m_car.fill(int.Parse(galTB.Text));
+                m_car.fill(int.Parse(galTB.Text));
 
             }
             catch (FormatException)

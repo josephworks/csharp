@@ -97,7 +97,7 @@
             // 
             // mpg
             // 
-            this.mpg.BackColor = System.Drawing.Color.Olive;
+            this.mpg.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.mpg.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.mpg.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mpg.Location = new System.Drawing.Point(378, 97);
@@ -123,7 +123,7 @@
             // 
             // capacity
             // 
-            this.capacity.BackColor = System.Drawing.Color.Olive;
+            this.capacity.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.capacity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.capacity.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.capacity.Location = new System.Drawing.Point(378, 157);
@@ -136,7 +136,7 @@
             // 
             // miles
             // 
-            this.miles.BackColor = System.Drawing.Color.Olive;
+            this.miles.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.miles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.miles.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.miles.Location = new System.Drawing.Point(378, 215);
@@ -270,7 +270,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.Olive;
+            this.label6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(485, 215);
@@ -283,7 +283,7 @@
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.Olive;
+            this.label8.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(485, 157);
@@ -296,7 +296,7 @@
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.Olive;
+            this.label10.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label10.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(485, 97);
@@ -309,6 +309,7 @@
             // 
             // aGauge1
             // 
+            this.aGauge1.BackColor = System.Drawing.Color.White;
             this.aGauge1.BaseArcColor = System.Drawing.Color.Gray;
             this.aGauge1.BaseArcRadius = 80;
             this.aGauge1.BaseArcStart = 135;
@@ -316,14 +317,14 @@
             this.aGauge1.BaseArcWidth = 2;
             this.aGauge1.Center = new System.Drawing.Point(100, 100);
             this.aGauge1.Location = new System.Drawing.Point(12, 12);
-            this.aGauge1.MaxValue = 400F;
-            this.aGauge1.MinValue = -100F;
+            this.aGauge1.MaxValue = 100F;
+            this.aGauge1.MinValue = 0F;
             this.aGauge1.Name = "aGauge1";
             this.aGauge1.NeedleColor1 = System.Windows.Forms.AGaugeNeedleColor.Gray;
             this.aGauge1.NeedleColor2 = System.Drawing.Color.DimGray;
             this.aGauge1.NeedleRadius = 80;
             this.aGauge1.NeedleType = System.Windows.Forms.NeedleType.Advance;
-            this.aGauge1.NeedleWidth = 2;
+            this.aGauge1.NeedleWidth = 3;
             this.aGauge1.ScaleLinesInterColor = System.Drawing.Color.Black;
             this.aGauge1.ScaleLinesInterInnerRadius = 73;
             this.aGauge1.ScaleLinesInterOuterRadius = 80;
@@ -351,6 +352,7 @@
             // 
             // aGauge2
             // 
+            this.aGauge2.BackColor = System.Drawing.Color.White;
             this.aGauge2.BaseArcColor = System.Drawing.Color.Gray;
             this.aGauge2.BaseArcRadius = 80;
             this.aGauge2.BaseArcStart = 135;
@@ -358,14 +360,14 @@
             this.aGauge2.BaseArcWidth = 2;
             this.aGauge2.Center = new System.Drawing.Point(100, 100);
             this.aGauge2.Location = new System.Drawing.Point(733, 12);
-            this.aGauge2.MaxValue = 400F;
-            this.aGauge2.MinValue = -100F;
+            this.aGauge2.MaxValue = 100F;
+            this.aGauge2.MinValue = 0F;
             this.aGauge2.Name = "aGauge2";
             this.aGauge2.NeedleColor1 = System.Windows.Forms.AGaugeNeedleColor.Gray;
             this.aGauge2.NeedleColor2 = System.Drawing.Color.DimGray;
             this.aGauge2.NeedleRadius = 80;
             this.aGauge2.NeedleType = System.Windows.Forms.NeedleType.Advance;
-            this.aGauge2.NeedleWidth = 2;
+            this.aGauge2.NeedleWidth = 3;
             this.aGauge2.ScaleLinesInterColor = System.Drawing.Color.Black;
             this.aGauge2.ScaleLinesInterInnerRadius = 73;
             this.aGauge2.ScaleLinesInterOuterRadius = 80;
@@ -395,7 +397,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(950, 432);
             this.Controls.Add(this.aGauge2);
             this.Controls.Add(this.aGauge1);
