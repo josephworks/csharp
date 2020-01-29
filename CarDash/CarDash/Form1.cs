@@ -7,6 +7,7 @@ namespace Dashboard
     public partial class Form1 : Form
     {
         private ICarInterface m_car;
+
         public Form1()
         {
             m_car = new Car(15, 30, "Example Car");
@@ -65,7 +66,6 @@ namespace Dashboard
             try
             {
                 m_car.fill(int.Parse(galTB.Text));
-
             }
             catch (FormatException)
             {

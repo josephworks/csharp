@@ -1,6 +1,6 @@
 ﻿namespace InterfacesStuff
 {
-    interface IAccount
+    internal interface IAccount
     {
         double getBalance();
 
@@ -8,5 +8,4 @@
 
         void withdraw(double amount);
     }
-
 }

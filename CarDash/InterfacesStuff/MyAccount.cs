@@ -1,11 +1,11 @@
 ﻿namespace InterfacesStuff
 {
-    class MyAccount : IAccount
+    internal class MyAccount : IAccount
     {
         private double m_balance;
+
         public MyAccount()
         {
-
         }
 
         public void deposit(double amount)

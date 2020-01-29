@@ -1,12 +1,5 @@
 ﻿using InterfacesStuff;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Dashboard
@@ -14,6 +7,7 @@ namespace Dashboard
     public partial class NewCar : Form
     {
         private ICarInterface m_car;
+
         public NewCar()
         {
             InitializeComponent();
@@ -24,7 +18,10 @@ namespace Dashboard
             this.Close();
         }
 
-        public ICarInterface getCar() { return m_car; }
+        public ICarInterface getCar()
+        {
+            return m_car;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -50,7 +47,6 @@ namespace Dashboard
 
         private void NewCar_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

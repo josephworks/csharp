@@ -2,10 +2,9 @@
 
 namespace InterfacesStuff
 {
-    class Spaceship : IJoystick
+    internal class Spaceship : IJoystick
     {
-        int m_sequence = 0;
-
+        private int m_sequence = 0;
 
         public bool Up()
         {
@@ -61,6 +60,5 @@ namespace InterfacesStuff
             m_sequence = 0;
             return true;
         }
-
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace InterfacesStuff
 {
-    class Car : ICarInterface
+    internal class Car : ICarInterface
     {
         private double m_capacity;
         private double m_gas;
@@ -19,13 +19,19 @@
             m_miles = 0;
         }
 
-        public double getMPG() { return m_mpg; }
+        public double getMPG()
+        {
+            return m_mpg;
+        }
 
-        public double getCapacity() { return m_capacity; }
+        public double getCapacity()
+        {
+            return m_capacity;
+        }
 
         public void drive(double minutes)
         {
-            double miles = (minutes/60) * m_speed;
+            double miles = (minutes / 60) * m_speed;
             double gas = miles / m_mpg;
             if (gas > m_gas)
             {
@@ -34,7 +40,6 @@
             }
             if ((int)m_gas > 0) { m_gas -= gas; m_miles += miles; }
             else { m_gas = 0; }
-            
         }
 
         public void fill(int gals)
@@ -46,8 +51,7 @@
             }
             else
             {
-            m_gas += gals;
-
+                m_gas += gals;
             }
         }
 
@@ -91,6 +95,9 @@
             return "Car: " + m_name + string.Format("\nGas: {0}\nCapacity: {1}\nSpeed:{2}\nMPG: {3}\nMiles: {4}", m_gas, m_capacity, m_speed, m_mpg, m_miles);
         }
 
-        public double getMiles() { return m_miles; }
+        public double getMiles()
+        {
+            return m_miles;
+        }
     }
 }

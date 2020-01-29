@@ -2,10 +2,9 @@
 
 namespace InterfacesStuff
 {
-
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ICarInterface c = new Car(10, 5, "Car");
             c.setSpeed(60);
@@ -24,11 +23,9 @@ namespace InterfacesStuff
             //WriteLine(Hi(345));
             ReadKey();
         }
-        
-        
+
         public static void konami()
         {
-
             Spaceship s = new Spaceship();
 
             s.Up();
@@ -48,7 +45,6 @@ namespace InterfacesStuff
             s.Start();
 
             ReadKey();
-
         }
     }
 }
