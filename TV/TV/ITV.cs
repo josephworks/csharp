@@ -2,17 +2,22 @@
 {
     interface ITV
     {
-        void Power();
+        bool Power(bool b);
+
+        string GetPower();
 
         int Mute();
 
         int VolumeUp();
 
         int VolumeDown();
+        int GetVolume();
 
         int ChannelUp();
 
         int ChannelDown();
+
+        int GetChannel();
 
         int Previous();
 
