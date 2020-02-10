@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesStuff", "InterfacesStuff\InterfacesStuff.csproj", "{680822F6-CC6D-4F45-A096-FB6BBEA57CF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDash", "CarDash\CarDash.csproj", "{616E4449-950F-4C4A-93D0-CE440B134B52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{680822F6-CC6D-4F45-A096-FB6BBEA57CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680822F6-CC6D-4F45-A096-FB6BBEA57CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680822F6-CC6D-4F45-A096-FB6BBEA57CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680822F6-CC6D-4F45-A096-FB6BBEA57CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{616E4449-950F-4C4A-93D0-CE440B134B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616E4449-950F-4C4A-93D0-CE440B134B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616E4449-950F-4C4A-93D0-CE440B134B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616E4449-950F-4C4A-93D0-CE440B134B52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7BFB6E4-31ED-4401-849B-08CE2DC18306}
+	EndGlobalSection
+EndGlobal

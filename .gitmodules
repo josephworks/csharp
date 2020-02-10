@@ -13,4 +13,4 @@
 	url = https://github.com/microsoft/Quantum
 [submodule "TrueCraft"]
 	path = TrueCraft
-	url = https://github.com/ddevault/TrueCraft
+	url = https://github.com/danielcrenna/TrueCraft
