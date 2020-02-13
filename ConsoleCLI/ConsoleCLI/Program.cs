@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 //using CmdLine;
 //using CommandLine;
 using static System.Console;
@@ -10,6 +11,8 @@ namespace ConsoleCLI
         private static void Main(string[] args)
         {
             string cmd = "";
+
+            string path = Directory.GetCurrentDirectory();
 
             WriteLine("JCLI v1.0 - Copyright JosephWorks 2020");
 
@@ -27,8 +30,8 @@ namespace ConsoleCLI
 
             if (cmd.Contains(" "))
             {
-                args = cmd.Substring(cmd.IndexOf(" ", StringComparison.Ordinal));
-                cmd = cmd.Substring(0, cmd.IndexOf(" ", StringComparison.Ordinal));
+                args = cmd.Substring(cmd.IndexOf(" ", StringComparison.Ordinal)).Trim();
+                cmd = cmd.Substring(0, cmd.IndexOf(" ", StringComparison.Ordinal)).Trim();
             }
 
             switch (cmd)
@@ -38,7 +41,41 @@ namespace ConsoleCLI
                     break;
 
                 case ("exists"):
-                    Write("Blank Text");
+                    WriteLine(File.Exists(args));
+                    break;
+
+                case ("pwd"):
+                    WriteLine(Directory.GetCurrentDirectory());
+                    break;
+
+                case ("ls"):
+                    WriteLine(Directory.GetFiles(Directory.GetCurrentDirectory()));
+                    break;
+
+                case ("dir"):
+                    foreach (string d in Directory.GetDirectories(Directory.GetCurrentDirectory()))
+                    {
+                        WriteLine(d + "\\");
+                    }
+                    foreach (string f in Directory.GetFiles(Directory.GetCurrentDirectory()))
+                    {
+                        WriteLine(f);
+                    }
+                    break;
+
+                case ("cd"):
+                    if (args.Length > 0)
+                    {
+                        if (args == "..")
+                        {
+                            string cd = Directory.GetParent(Directory.GetCurrentDirectory()).ToString();
+                            Directory.SetCurrentDirectory(cd);
+                        }
+                        else
+                        {
+                            Directory.SetCurrentDirectory(args);
+                        }
+                    }
                     break;
 
                 default:
