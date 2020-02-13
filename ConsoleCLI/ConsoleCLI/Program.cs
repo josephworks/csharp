@@ -2,7 +2,13 @@
 using System.IO;
 //using CmdLine;
 //using CommandLine;
+using System.Management;
+//using System.Management.Automation.Powershell;
 using static System.Console;
+
+//TODO!
+////TODO: Port to .Net core ASAP!!!
+//TODO!
 
 namespace ConsoleCLI
 {
@@ -13,6 +19,8 @@ namespace ConsoleCLI
             string cmd = "";
 
             string path = Directory.GetCurrentDirectory();
+
+            //PowerShell ps = PowerShell.Create();
 
             WriteLine("JCLI v1.0 - Copyright JosephWorks 2020");
 
@@ -80,6 +88,7 @@ namespace ConsoleCLI
 
                 default:
                     WriteLine("Command not found");
+                    //Powershell.Create("get-process").Invoke();
                     break;
             }
         }
