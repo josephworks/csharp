@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Management" Version="4.7.0" />
     <PackageReference Include="System.Management.Automation" Version="6.2.4" />
   </ItemGroup>
 

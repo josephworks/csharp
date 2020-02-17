@@ -1,12 +1,15 @@
 ﻿//using CmdLine;
 //using CommandLine;
-//using System.Management.Automation.Powershell;
+//using System.Net;
+//using System.Text;
+//using System.Management.Automation;
+//using System.Management.Automation.Runspaces;
+//using System.Management.Automation.PowerShell;
+//using System.Collections.ObjectModel;
 using System;
-using System.Collections.ObjectModel;
 using System.IO;
-using System.Management.Automation;
+using System.Diagnostics;
 using static System.Console;
-using static System.Management.Automation.PowerShell;
 
 namespace JCLI
 {
@@ -21,15 +24,36 @@ namespace JCLI
 
             string path = Directory.GetCurrentDirectory() ?? throw new ArgumentNullException($"Directory.GetCurrentDirectory()");
 
-            string psc = "";
+            //PowerShell ps = PowerShell.Create();
+            //ps.AddCommand("Get-Process");
+            //ps.AddParameter("Name", "PowerShell - JCLI");
+            //ps.Invoke();
 
-            psc = "version";
+            Process process = new Process();
+            process.StartInfo.FileName = "powershell.exe";
+            process.StartInfo.CreateNoWindow = true;
+            process.StartInfo.RedirectStandardInput = true;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.UseShellExecute = false;
+            process.Start();
+            process.StandardInput.WriteLine("version");
+            process.StandardInput.Flush();
+            process.StandardInput.Close();
+            process.WaitForExit();
+            Console.WriteLine(process.StandardOutput.ReadToEnd());
 
-            PowerShell ps = PowerShell.Create();
-
-            ps.AddCommand(psc);
-
-            ps.Invoke();
+            Process process2 = new Process();
+            process2.StartInfo.FileName = "cmd.exe";
+            process2.StartInfo.CreateNoWindow = true;
+            process2.StartInfo.RedirectStandardInput = true;
+            process2.StartInfo.RedirectStandardOutput = true;
+            process2.StartInfo.UseShellExecute = false;
+            process2.Start();
+            process2.StandardInput.WriteLine("version");
+            process2.StandardInput.Flush();
+            process2.StandardInput.Close();
+            process2.WaitForExit();
+            Console.WriteLine(process2.StandardOutput.ReadToEnd());
 
             WriteLine("JCLI v1.0 - Copyright JosephWorks 2020");
 
@@ -40,6 +64,23 @@ namespace JCLI
                 Process(cmd);
             }
         }
+
+        // static string PowerShellRun(string script)
+        // {
+        //     Runspace runspace = RunspaceFactory.CreateRunspace();
+        //     runspace.Open();
+        //     Pipeline pipeline = runspace.CreatePipeline();
+        //     pipeline.Commands.AddScript(script);
+        //     pipeline.Commands.Add("version"); // PowerShell Command Here
+        //     Collection<PSObject> results = pipeline.Invoke();
+        //     runspace.Close();
+        //     StringBuilder stringBuilder = new StringBuilder();
+        //     foreach (PSObject psObject in results)
+        //     {
+        //         stringBuilder.AppendLine(psObject.ToString());
+        //     }
+        //     return stringBuilder.ToString();
+        // }
 
         public static void Process(string cmd)
         {
@@ -96,8 +137,19 @@ namespace JCLI
                     break;
 
                 default:
-                    WriteLine("Command not found");
-                    //Powershell.Create("get-process").Invoke();
+                    WriteLine("Command not found - Passing to PowerShell");
+                    Process process = new Process();
+                    process.StartInfo.FileName = "powershell.exe";
+                    process.StartInfo.CreateNoWindow = true;
+                    process.StartInfo.RedirectStandardInput = true;
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.UseShellExecute = false;
+                    process.Start();
+                    process.StandardInput.WriteLine(cmd); // Passes command to powershell
+                    process.StandardInput.Flush();
+                    process.StandardInput.Close();
+                    process.WaitForExit();
+                    Console.WriteLine(process.StandardOutput.ReadToEnd());
                     break;
             }
         }
