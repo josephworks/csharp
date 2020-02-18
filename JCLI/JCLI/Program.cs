@@ -22,7 +22,7 @@ namespace JCLI
 
             //Original: string path = Directory.GetCurrentDirectory();
 
-            string path = Directory.GetCurrentDirectory() ?? throw new ArgumentNullException($"Directory.GetCurrentDirectory()");
+            //string path = Directory.GetCurrentDirectory() ?? throw new ArgumentNullException($"Directory.GetCurrentDirectory()");
 
             //PowerShell ps = PowerShell.Create();
             //ps.AddCommand("Get-Process");
@@ -55,7 +55,7 @@ namespace JCLI
             process2.WaitForExit();
             Console.WriteLine(process2.StandardOutput.ReadToEnd());
 
-            WriteLine("JCLI v1.0 - Copyright JosephWorks 2020");
+            WriteLine("JCLI v2.0 - Copyright JosephWorks 2020");
 
             while (cmd != null && cmd.ToLower() != "exit")
             {
