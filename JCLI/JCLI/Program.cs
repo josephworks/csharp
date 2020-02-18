@@ -134,13 +134,16 @@ namespace JCLI
                         }
                     }
                     break;
+
                 case ("copy"):
                     File.Copy(args[1], args[2]);
                     break;
+
                 case ("rm"):
                 case ("del"):
                     File.Delete(args[1]);
                     break;
+
                 default:
                     WriteLine("Command not found - Passing to PowerShell");
                     Process process = new Process();
