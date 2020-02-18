@@ -144,6 +144,11 @@ namespace JCLI
                     File.Delete(args[1]);
                     break;
 
+                case ("rename"):
+                case ("ren"):
+                    File.Move(args[1], args[2]);
+                    break;
+
                 default:
                     WriteLine("Command not found - Passing to PowerShell");
                     Process process = new Process();
