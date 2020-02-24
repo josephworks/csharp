@@ -89,6 +89,14 @@ namespace ConsoleCLI
                     File.Move(args[1], args[2]);
                     break;
 
+                case ("fileinfo"):
+                    FileInfo fi = new FileInfo(args[1]);
+                    WriteLine("Length: " + fi.Length);
+                    WriteLine("Creation Time: " + fi.CreationTime);
+                    WriteLine("Last Access Time: " + fi.LastAccessTime);
+                    WriteLine("Last Save: " + fi.LastWriteTime);
+                    WriteLine("Is Read Only: " + fi.IsReadOnly);
+                    break;
                 default:
                     WriteLine("Command not found");
                     break;
