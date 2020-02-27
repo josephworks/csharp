@@ -43,6 +43,7 @@
 int bump;
 bool scanNow;
 bool injectNow;
+bool gateOpen;
 //bool initial = true;
 
 task init()
@@ -79,7 +80,7 @@ task init()
 task injectMarble() {
 	while (true) {
 		if (injectNow == true) {
-			startMotor(marbleGrabber, -30);
+			startMotor(marbleGrabber, -29);
 			sleep(250);
 			stopMotor(marbleGrabber);
 			sleep(500);
@@ -90,11 +91,27 @@ task injectMarble() {
 	}
 }
 
+task opperateGate() {
+	if (gateOpen == true) {
+		setServo(gateServo, 64);
+		sleep(500);
+	}
+	if (gateOpen == false) {
+		setServo(gateServo, -64);
+		sleep(500);
+	}
+}
+
 task scanMarble() {
 	while (true) {
 		if (scanNow == true) {
 			// ADD CODE
-			startMotor(cupRotater, 127);
+			startMotor(cupRotater, 64);
+			sleep(500);
+			stopMotor(cupRotater);
+			sleep(500);
+			startTask(opperateGate);
+			sleep(550);
 		}
 		else {
 			break;
