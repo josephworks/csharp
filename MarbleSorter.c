@@ -18,7 +18,7 @@
 
 /*-----------------------------------------------------------------------------*/
 /*                                                                             */
-/*  definitiona and variables for the motor slew rate controller.              */
+/*  definitions and variables for the motor slew rate controller.              */
 /*                                                                             */
 /*-----------------------------------------------------------------------------*/
 
@@ -39,6 +39,7 @@
 
 // CODEDOC:
 // Multitasking - https://www.robotc.net/wikiarchive/Multitasking_tips
+// Bumpswithc - http://cdn.robotc.net/pdfs/natural-language/hp_touch.pdf
 
 int bump;
 bool scanNow;
