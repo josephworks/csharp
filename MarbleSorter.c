@@ -39,7 +39,7 @@
 
 // CODEDOC:
 // Multitasking - https://www.robotc.net/wikiarchive/Multitasking_tips
-// Bumpswithc - http://cdn.robotc.net/pdfs/natural-language/hp_touch.pdf
+// Bumpswitch - http://cdn.robotc.net/pdfs/natural-language/hp_touch.pdf
 
 int bump;
 bool scanNow;
@@ -124,9 +124,9 @@ task main()
 {
 	//bump = getBumperValue(startButton);
 	startTask(init);
-	
+
 	untilTouch(startButton);
-	
+
 	injectNow = true;
 	//waitUntil(startButton);
 	startTask(injectMarble);
@@ -138,7 +138,7 @@ task main()
 	{
 		// Keep the program alive
 		sleep(1000);
-		
+
 		// FOR MOTOR TRSTING PURPOSES
 		//startMotor(cupRotater, 127);
 		//startMotor(marbleGrabber, 127);
