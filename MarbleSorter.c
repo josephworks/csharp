@@ -123,7 +123,9 @@ task main()
 {
 	//bump = getBumperValue(startButton);
 	startTask(init);
-
+	
+	untilTouch(startButton);
+	
 	injectNow = true;
 	//waitUntil(startButton);
 	startTask(injectMarble);
@@ -135,6 +137,8 @@ task main()
 	{
 		// Keep the program alive
 		sleep(1000);
+		
+		// FOR MOTOR TRSTING PURPOSES
 		//startMotor(cupRotater, 127);
 		//startMotor(marbleGrabber, 127);
 	}
