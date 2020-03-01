@@ -7,8 +7,8 @@
 //using System.Management.Automation.PowerShell;
 //using System.Collections.ObjectModel;
 using System;
-using System.IO;
 using System.Diagnostics;
+using System.IO;
 using static System.Console;
 
 namespace JCLI
@@ -22,7 +22,7 @@ namespace JCLI
 
             //Original: string path = Directory.GetCurrentDirectory();
 
-            string path = Directory.GetCurrentDirectory() ?? throw new ArgumentNullException($"Directory.GetCurrentDirectory()");
+            //string path = Directory.GetCurrentDirectory() ?? throw new ArgumentNullException($"Directory.GetCurrentDirectory()");
 
             //PowerShell ps = PowerShell.Create();
             //ps.AddCommand("Get-Process");
@@ -55,7 +55,7 @@ namespace JCLI
             process2.WaitForExit();
             Console.WriteLine(process2.StandardOutput.ReadToEnd());
 
-            WriteLine("JCLI v1.0 - Copyright JosephWorks 2020");
+            WriteLine("JCLI v2.0 - Copyright JosephWorks 2020");
 
             while (cmd != null && cmd.ToLower() != "exit")
             {
@@ -84,13 +84,15 @@ namespace JCLI
 
         public static void Process(string cmd)
         {
-            String args = "";
+            string[] args = cmd.Split(' ');
 
-            if (cmd.Contains(" "))
-            {
-                args = cmd.Substring(cmd.IndexOf(" ", StringComparison.Ordinal)).Trim();
-                cmd = cmd.Substring(0, cmd.IndexOf(" ", StringComparison.Ordinal)).Trim();
-            }
+            cmd = args[0];
+
+            // if (cmd.Contains(" "))
+            // {
+            //     args = cmd.Substring(cmd.IndexOf(" ", StringComparison.Ordinal)).Trim();
+            //     cmd = cmd.Substring(0, cmd.IndexOf(" ", StringComparison.Ordinal)).Trim();
+            // }
 
             switch (cmd)
             {
@@ -99,7 +101,7 @@ namespace JCLI
                     break;
 
                 case ("exists"):
-                    WriteLine(File.Exists(args));
+                    WriteLine(File.Exists(args[1]));
                     break;
 
                 case ("pwd"):
@@ -107,9 +109,6 @@ namespace JCLI
                     break;
 
                 case ("ls"):
-                    WriteLine(Directory.GetFiles(Directory.GetCurrentDirectory()));
-                    break;
-
                 case ("dir"):
                     foreach (string d in Directory.GetDirectories(Directory.GetCurrentDirectory()))
                     {
@@ -122,18 +121,32 @@ namespace JCLI
                     break;
 
                 case ("cd"):
-                    if (args.Length > 0)
+                    if (args[1].Length > 0)
                     {
-                        if (args == "..")
+                        if (args[1] == "..")
                         {
                             string cd = Directory.GetParent(Directory.GetCurrentDirectory()).ToString();
                             Directory.SetCurrentDirectory(cd);
                         }
                         else
                         {
-                            Directory.SetCurrentDirectory(args);
+                            Directory.SetCurrentDirectory(args[1]);
                         }
                     }
+                    break;
+
+                case ("copy"):
+                    File.Copy(args[1], args[2]);
+                    break;
+
+                case ("rm"):
+                case ("del"):
+                    File.Delete(args[1]);
+                    break;
+
+                case ("rename"):
+                case ("ren"):
+                    File.Move(args[1], args[2]);
                     break;
 
                 default:
