@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-03-17T09:07:00.093-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "NullPointer Exception if no /ignore paremeter specified",
+    "LastUpdatedDate": "2013-05-15T18:00:02.333-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "SolGen",
+    "ReportedDate": "2008-03-12T07:13:36.13-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "NullPointer Exception if no /ignore paremeter specified",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9631
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

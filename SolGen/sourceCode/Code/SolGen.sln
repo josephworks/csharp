@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolGen", "SolGen.csproj", "{F73D25AC-D47F-471A-8A61-DB5F7C0A4AAB}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs03.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SolGen.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F73D25AC-D47F-471A-8A61-DB5F7C0A4AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73D25AC-D47F-471A-8A61-DB5F7C0A4AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73D25AC-D47F-471A-8A61-DB5F7C0A4AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73D25AC-D47F-471A-8A61-DB5F7C0A4AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

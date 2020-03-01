@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have Win XP64 and i installed it to C:\\WinXP64\n \nWhen i use solgen i get this error\n \nA problem occurred running SolGen and the generation did not complete.\nException: The imported project \"C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\Microsoft.CSharp.targets\" was not found. Confirm that the path in the <Import> declaration is correct, and that the file\nexists on disk.  D:\\My Documents\\Visual Studio 2008\\Projects\\.........\n \n   at Microsoft.Build.Shared.ProjectErrorUtilities.ThrowInvalidProject(String errorSubCategoryResourceName, XmlNode xmlNode, String resourceName, Object[] args)\n   at Microsoft.Build.BuildEngine.Project.LoadImportedProject(Import import)\n   at Microsoft.Build.BuildEngine.Project.ProcessImportElement(XmlElement importElement, Boolean importedProject)\n   at Microsoft.Build.BuildEngine.Project.ProcessProjectChildren(XmlElement projectElement, Boolean importedProject)\n   at Microsoft.Build.BuildEngine.Project.ProcessMainProjectElement()\n   at Microsoft.Build.BuildEngine.Project.InternalLoadFromXmlDocument(XmlDocument projectXml)\n   at Microsoft.Build.BuildEngine.Project.Load(String projectFileName)\n   at SolGen.SolutionGenerator.ProcessProject(String folder, String file)\n   at SolGen.SolutionGenerator.FindAllProjects(String folder)\n   at SolGen.SolutionGenerator.FindAllProjects(String folder)\n   at SolGen.SolutionGenerator.Start(String[] args)\n   at SolGen.SolGenMain.Main(String[] args)\n \nIn the project file the refernce is\n  <Import Project=\"$(MSBuildBinPath)\\Microsoft.CSharp.targets\" />\n \nIt would appear the project class is not resolving the $(MSBuildBinPath) correctly when it load the project\n \n Project project = new Project(m_Engine);\nproject.Load(qualifiedFile);",
+    "LastUpdatedDate": "2013-02-12T19:06:34.5-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "SolGen",
+    "ReportedDate": "2008-06-18T09:14:54.397-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Prject load error because windows path is not C:\\windows",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10365
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

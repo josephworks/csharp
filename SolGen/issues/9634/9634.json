@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-03-17T09:05:54.123-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add /probe: argument to provide a list of folders to probe for projects and dll references outside the root folder.",
+    "LastUpdatedDate": "2013-05-15T18:00:01.413-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "SolGen",
+    "ReportedDate": "2008-03-12T08:09:33.24-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Allow probing for projects outside the specified root folder",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 9634
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

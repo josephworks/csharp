@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It would be nice to handle the <Private> and <SpecificVersion> tags of the references in the project files. Switches could be added to force these settings. For example, to copy DLLs from a centralized Library folder where you want to use whatever latest version was put there, <Private> should be set to True (to copy the library to the application base folder) and <SpecificVersion>should be set to false.",
+    "LastUpdatedDate": "2013-02-12T19:06:38.787-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "SolGen",
+    "ReportedDate": "2008-03-11T11:19:14.113-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Handle the <Private> and <SpecificVersion> tags",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 9626
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

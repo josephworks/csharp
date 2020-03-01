@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-03-17T09:06:18.953-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Change to .dllRefs and .projRefs.",
+    "LastUpdatedDate": "2013-05-15T18:00:02.027-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "SolGen",
+    "ReportedDate": "2008-03-12T07:30:03.537-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": ".build and .dev extensions are confusing",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9633
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Although the solutions files created by SolGen are not full VS 2005 solution files (they simply list the projects to include) and they build find using MSBUild, they are recreated by VS 2005 IDE when you open up the solution, rebuild and save. In the case of solution files that contain projects that have project references, VS 2005 IDE insists on not only recreating the solution file but on also modifying all the contained project files (to modify the project GUID?). It would be great to 1) find a solution file model API like MSBuild's project file model to build a full VS 2005 solution files in order to not have VS 2005 modify the solution file; and 2) understand why VS 2005 IDE insists on regenerating project GUIDs. Maybe 1) would fix 2) ?",
+    "LastUpdatedDate": "2013-02-12T19:06:35.19-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "SolGen",
+    "ReportedDate": "2008-03-14T06:12:22.117-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "SolGen-generated solution and project files are modified by VS 2005 IDE",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9654
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

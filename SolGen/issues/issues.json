@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 9625,
+    "Title": "Add support for sub-folders in solution files"
+  },
+  {
+    "Id": 9626,
+    "Title": "Handle the <Private> and <SpecificVersion> tags"
+  },
+  {
+    "Id": 9631,
+    "Title": "NullPointer Exception if no /ignore paremeter specified"
+  },
+  {
+    "Id": 9632,
+    "Title": "Exception if /root: folder does not exist"
+  },
+  {
+    "Id": 9633,
+    "Title": ".build and .dev extensions are confusing"
+  },
+  {
+    "Id": 9634,
+    "Title": "Allow probing for projects outside the specified root folder"
+  },
+  {
+    "Id": 9654,
+    "Title": "SolGen-generated solution and project files are modified by VS 2005 IDE"
+  },
+  {
+    "Id": 10365,
+    "Title": "Prject load error because windows path is not C:\\windows"
+  },
+  {
+    "Id": 14367,
+    "Title": "program bombs on directories with spaces"
+  }
+]
