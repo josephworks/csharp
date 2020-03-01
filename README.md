@@ -8,6 +8,6 @@ Tyler Medina - [tamed512](https://GitHub.com/tamed512) - [(src)](https://github.
 
 Mr.Clark(e) - [MrClarkeSoftware](https://github.com/MrClarkeSoftware)
 
-> Note: The Contributors listed can use this project according to the MIT License
+> Note: The Contributors listed can use this project according to the [Notable Contributor MIT License](https://github.com/josephworks/csharp/blob/master/NCLICENSE)
 
 #### Click [here](LiveShare.md) to [Work With Joseph!](LiveShare.md)
