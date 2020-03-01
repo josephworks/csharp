@@ -1,4 +1,13 @@
 # CSharp
-CSharp Files - Advanced Software Developer
 
-Click [here](LiveShare.md) to [Work With Joseph!](LiveShare.md)
+#### CSharp Files - Advanced Software Developer
+
+### Notable Contributors
+
+Tyler Medina - [tamed512](https://GitHub.com/tamed512) - [(src)](https://github.com/tamed512/csharp-1)
+
+Mr.Clark(e) - [MrClarkeSoftware](https://github.com/MrClarkeSoftware)
+
+> Note: The Contributors listed can use this project according to the MIT License
+
+#### Click [here](LiveShare.md) to [Work With Joseph!](LiveShare.md)
