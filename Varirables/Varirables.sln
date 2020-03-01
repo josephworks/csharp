@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Varirables", "Varirables\Varirables.csproj", "{B2B32CB8-3E8A-4344-BFB4-EFC62A98D4CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2B32CB8-3E8A-4344-BFB4-EFC62A98D4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B32CB8-3E8A-4344-BFB4-EFC62A98D4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B32CB8-3E8A-4344-BFB4-EFC62A98D4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B32CB8-3E8A-4344-BFB4-EFC62A98D4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1846F94-BB57-48BF-9062-AE800702945F}
+	EndGlobalSection
+EndGlobal
