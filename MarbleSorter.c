@@ -139,7 +139,7 @@ task main()
 		// Keep the program alive
 		sleep(1000);
 
-		// FOR MOTOR TRSTING PURPOSES
+		// FOR MOTOR TESTING PURPOSES
 		//startMotor(cupRotater, 127);
 		//startMotor(marbleGrabber, 127);
 	}
