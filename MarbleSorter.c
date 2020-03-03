@@ -48,6 +48,7 @@ bool done;
 bool scanNow;
 bool injectNow;
 bool gateOpen;
+bool opperateGateNow;
 //bool initial = true;
 
 task init()
@@ -71,7 +72,7 @@ task init()
 	// Start Init
 	robotType(none);
 	turnFlashlightOn(flashlight, 127);
-	setServo(gateServo, 40);
+	setServo(gateServo, 10);
 	//setServo(gateServo, -100);
 	// End Init
 	sleep(1000);
@@ -88,7 +89,25 @@ task injectMarble() {
 			sleep(400);
 			injected = injected + 1;
 			stopMotor(marbleGrabber);
-			sleep(650);
+			sleep(1500);
+		}
+		else {
+			break;
+		}
+	}
+}
+
+task scanMarble() {
+	while (true) {
+		if (scanNow == true) {
+			opperateGateNow = false;
+			// ADD CODE
+			startMotor(cupRotater, 48);
+			sleep(200);
+			stopMotor(cupRotater);
+			sleep(850);
+			opperateGateNow = true;
+			sleep(500);
 		}
 		else {
 			break;
@@ -97,29 +116,16 @@ task injectMarble() {
 }
 
 task opperateGate() {
-	if (gateOpen == true) {
-		setServo(gateServo, 64);
-		sleep(500);
-		gateOpen = false;
-	}
-	if (gateOpen == false) {
-		setServo(gateServo, -64);
-		sleep(500);
-		gateOpen = true;
-	}
-}
-
-task scanMarble() {
-	while (true) {
-		if (scanNow == true) {
-			// ADD CODE
-			startMotor(cupRotater, 64);
+	while (opperateGateNow == true) {
+		if (gateOpen == true) {
+			setServo(gateServo, 80);
 			sleep(500);
-			stopMotor(cupRotater);
-			sleep(550);
+			gateOpen = false;
 		}
-		else {
-			break;
+		if (gateOpen == false) {
+			setServo(gateServo, 10);
+			sleep(500);
+			gateOpen = true;
 		}
 	}
 }
@@ -199,60 +205,38 @@ task main()
 	}
 
 	if (done == true) {
-		done = false;
-		//bump = getBumperValue(startButton);
-		startTask(init);
-
-		untilTouch(startButton);
-
-		injectNow = true;
-
-		startTask(injectMarble);
-
-		scanNow = true;
-
-		startTask(scanMarble);
-
-		gateOpen = true;
-
-		startTask(ledDebug);
-
-		for (count=0; count < 15; count++) {
-			startTask(opperateGate);
-		}
-
-		while (done == false)
-		{
-			// Keep the program alive
-			sleep(1000);
-
-			// FOR MOTOR TESTING PURPOSES
-			//startMotor(cupRotater, 127);
-			//startMotor(marbleGrabber, 127);
-		}
+		turnLEDOff(ledCaution);
+		turnLEDOff(ledError);
+		turnLEDOff(led1);
+		turnLEDOff(led2);
+		turnLEDOff(led3);
+		turnLEDOff(led4);
+		turnLEDOff(led5);
+		turnLEDOff(led6);
 	}
 }
 
 //PSEUDOCODETOIMPL
-//task main() { 
-//while(1==1)
-//{
-//turnFlashlightOn(flashlight,127);
-//startMotor(marblemotor,15);
-//wait(.20);
+//task main() {
+//	while(1==1)
+//	{
+//		turnFlashlightOn(flashlight,127);
+//		startMotor(marblemotor,15);
+//		wait(.20);
 //} }
-//stopMotor(marblemotor); wait(2);
+//stopMotor(marblemotor);
+//wait(2);
 //if (SensorValue[lightsensor]>=250) {
-//startMotor(binmotor,40); 
-//untilEncoderCounts(110,quad);
-//stopMotor(binmotor); 
-//startMotor(marblemotor,20);
-//wait(.25); 
-//stopMotor(marblemotor); 
-//wait(1);
-//stopMotor(marblemotor); 
-//startMotor(binmotor,-40); 
-//untilEncoderCounts(-105,quad); 
-//stopMotor(binmotor);
-//wait(1); 
+//	startMotor(binmotor,40);
+//	untilEncoderCounts(110,quad);
+//	stopMotor(binmotor);
+//	startMotor(marblemotor,20);
+//	wait(.25);
+//	stopMotor(marblemotor);
+//	wait(1);
+//	stopMotor(marblemotor);
+//	startMotor(binmotor,-40);
+//	untilEncoderCounts(-105,quad);
+//	stopMotor(binmotor);
+//	wait(1);
 //}
