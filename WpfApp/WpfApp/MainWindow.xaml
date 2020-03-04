@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Menu>
-            <Button/>
+            <Button />
         </Menu>
     </Grid>
 </Window>
