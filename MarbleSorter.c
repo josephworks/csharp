@@ -42,9 +42,13 @@
 // Bumpswitch - http://cdn.robotc.net/pdfs/natural-language/hp_touch.pdf
 
 int bump;
+int count;
+int injected;
+bool done;
 bool scanNow;
 bool injectNow;
 bool gateOpen;
+bool opperateGateNow;
 //bool initial = true;
 
 task init()
@@ -68,7 +72,7 @@ task init()
 	// Start Init
 	robotType(none);
 	turnFlashlightOn(flashlight, 127);
-	setServo(gateServo, 40);
+	setServo(gateServo, 10);
 	//setServo(gateServo, -100);
 	// End Init
 	sleep(1000);
@@ -82,8 +86,27 @@ task injectMarble() {
 	while (true) {
 		if (injectNow == true) {
 			startMotor(marbleGrabber, -29);
-			sleep(250);
+			sleep(400);
+			injected = injected + 1;
 			stopMotor(marbleGrabber);
+			sleep(1500);
+		}
+		else {
+			break;
+		}
+	}
+}
+
+task scanMarble() {
+	while (true) {
+		if (scanNow == true) {
+			opperateGateNow = false;
+			// ADD CODE
+			startMotor(cupRotater, 48);
+			sleep(200);
+			stopMotor(cupRotater);
+			sleep(850);
+			opperateGateNow = true;
 			sleep(500);
 		}
 		else {
@@ -93,29 +116,57 @@ task injectMarble() {
 }
 
 task opperateGate() {
-	if (gateOpen == true) {
-		setServo(gateServo, 64);
-		sleep(500);
-	}
-	if (gateOpen == false) {
-		setServo(gateServo, -64);
-		sleep(500);
+	while (opperateGateNow == true) {
+		if (gateOpen == true) {
+			setServo(gateServo, 80);
+			sleep(500);
+			gateOpen = false;
+		}
+		if (gateOpen == false) {
+			setServo(gateServo, 10);
+			sleep(500);
+			gateOpen = true;
+		}
 	}
 }
 
-task scanMarble() {
-	while (true) {
-		if (scanNow == true) {
-			// ADD CODE
-			startMotor(cupRotater, 64);
-			sleep(500);
-			stopMotor(cupRotater);
-			sleep(500);
-			startTask(opperateGate);
-			sleep(550);
+task ledDebug() {
+	while (injected < 16) {
+		if (injected == 2) {
+			turnLEDOn(led1);
 		}
-		else {
-			break;
+		if (injected == 4) {
+			turnLEDOn(led1);
+			turnLEDOn(led2);
+		}
+		if (injected == 7) {
+			turnLEDOn(led1);
+			turnLEDOn(led2);
+			turnLEDOn(led3);
+		}
+		if (injected == 10) {
+			turnLEDOn(led1);
+			turnLEDOn(led2);
+			turnLEDOn(led3);
+			turnLEDOn(led4);
+		}
+		if (injected == 12) {
+			turnLEDOn(led1);
+			turnLEDOn(led2);
+			turnLEDOn(led3);
+			turnLEDOn(led4);
+			turnLEDOn(led5);
+		}
+		if (injected == 14) {
+			turnLEDOn(led1);
+			turnLEDOn(led2);
+			turnLEDOn(led3);
+			turnLEDOn(led4);
+			turnLEDOn(led5);
+			turnLEDOn(led6);
+		}
+		if (injected == 15) {
+			done = true;
 		}
 	}
 }
@@ -128,19 +179,64 @@ task main()
 	untilTouch(startButton);
 
 	injectNow = true;
-	//waitUntil(startButton);
+
 	startTask(injectMarble);
 
 	scanNow = true;
+
 	startTask(scanMarble);
 
-	while(true)
+	gateOpen = true;
+
+	startTask(ledDebug);
+
+	for (count=0; count < 15; count++) {
+		startTask(opperateGate);
+	}
+
+	while (done == false)
 	{
 		// Keep the program alive
 		sleep(1000);
 
-		// FOR MOTOR TRSTING PURPOSES
+		// FOR MOTOR TESTING PURPOSES
 		//startMotor(cupRotater, 127);
 		//startMotor(marbleGrabber, 127);
 	}
+
+	if (done == true) {
+		turnLEDOff(ledCaution);
+		turnLEDOff(ledError);
+		turnLEDOff(led1);
+		turnLEDOff(led2);
+		turnLEDOff(led3);
+		turnLEDOff(led4);
+		turnLEDOff(led5);
+		turnLEDOff(led6);
+	}
 }
+
+//PSEUDOCODETOIMPL
+//task main() {
+//	while(1==1)
+//	{
+//		turnFlashlightOn(flashlight,127);
+//		startMotor(marblemotor,15);
+//		wait(.20);
+//} }
+//stopMotor(marblemotor);
+//wait(2);
+//if (SensorValue[lightsensor]>=250) {
+//	startMotor(binmotor,40);
+//	untilEncoderCounts(110,quad);
+//	stopMotor(binmotor);
+//	startMotor(marblemotor,20);
+//	wait(.25);
+//	stopMotor(marblemotor);
+//	wait(1);
+//	stopMotor(marblemotor);
+//	startMotor(binmotor,-40);
+//	untilEncoderCounts(-105,quad);
+//	stopMotor(binmotor);
+//	wait(1);
+//}

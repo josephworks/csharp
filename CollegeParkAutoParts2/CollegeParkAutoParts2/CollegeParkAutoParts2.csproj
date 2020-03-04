@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C366A4C-3675-41BF-B5A2-183F40CD6E56}</ProjectGuid>
+    <ProjectGuid>{7764412A-B887-47A3-8C8E-2EEB88D66934}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CollegeParkAutoParts2</RootNamespace>
     <AssemblyName>CollegeParkAutoParts2</AssemblyName>
@@ -52,6 +52,7 @@
     <Compile Include="Central.Designer.cs">
       <DependentUpon>Central.cs</DependentUpon>
     </Compile>
+    <Compile Include="PartDescription.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Central.resx">
@@ -78,6 +79,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="category1_wFU_icon.ico" />
+    <Content Include="category2_ZbJ_icon.ico" />
+    <Content Include="cpap2_kLu_icon.ico" />
+    <Content Include="house_fkE_icon.ico" />
+    <Content Include="make1_HO4_icon.ico" />
+    <Content Include="model1_LcL_icon.ico" />
+    <Content Include="model2_6Cl_icon.ico" />
+    <Content Include="year1_QY7_icon.ico" />
+    <Content Include="year2_td7_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

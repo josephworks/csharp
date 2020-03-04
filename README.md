@@ -4,7 +4,7 @@
 
 ### Notable Contributors
 
-Tyler Medina - [tamed512](https://GitHub.com/tamed512) - [(src)](https://github.com/tamed512/csharp-1)
+Tyler Medina - [tamed512](https://GitHub.com/tamed512) - [(src)](https://github.com/tamed512/csharp)
 
 Mr.Clark(e) - [MrClarkeSoftware](https://github.com/MrClarkeSoftware)
 
