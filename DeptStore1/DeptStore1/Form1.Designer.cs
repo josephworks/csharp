@@ -107,9 +107,10 @@
             listViewItem5,
             listViewItem6});
             this.lvwStoreItems.LargeImageList = this.imgLarge;
-            this.lvwStoreItems.Location = new System.Drawing.Point(150, 72);
+            this.lvwStoreItems.Location = new System.Drawing.Point(13, 33);
+            this.lvwStoreItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvwStoreItems.Name = "lvwStoreItems";
-            this.lvwStoreItems.Size = new System.Drawing.Size(504, 262);
+            this.lvwStoreItems.Size = new System.Drawing.Size(1041, 353);
             this.lvwStoreItems.SmallImageList = this.imgSmall;
             this.lvwStoreItems.TabIndex = 0;
             this.lvwStoreItems.UseCompatibleStateImageBehavior = false;
@@ -168,9 +169,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(671, 372);
+            this.btnClose.Location = new System.Drawing.Point(867, 394);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 52);
+            this.btnClose.Size = new System.Drawing.Size(140, 64);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -179,9 +181,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(147, 56);
+            this.label1.Location = new System.Drawing.Point(9, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Store Items";
             // 
@@ -190,9 +193,10 @@
             this.btnDetails.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnDetails.Checked = true;
             this.btnDetails.Image = global::DeptStore1.Properties.Resources.Details;
-            this.btnDetails.Location = new System.Drawing.Point(519, 372);
+            this.btnDetails.Location = new System.Drawing.Point(664, 394);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(111, 52);
+            this.btnDetails.Size = new System.Drawing.Size(148, 64);
             this.btnDetails.TabIndex = 4;
             this.btnDetails.TabStop = true;
             this.btnDetails.UseVisualStyleBackColor = true;
@@ -202,9 +206,10 @@
             // 
             this.btnList.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnList.Image = global::DeptStore1.Properties.Resources.List;
-            this.btnList.Location = new System.Drawing.Point(369, 372);
+            this.btnList.Location = new System.Drawing.Point(464, 394);
+            this.btnList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(111, 52);
+            this.btnList.Size = new System.Drawing.Size(148, 64);
             this.btnList.TabIndex = 3;
             this.btnList.UseVisualStyleBackColor = true;
             this.btnList.CheckedChanged += new System.EventHandler(this.btnList_CheckedChanged);
@@ -213,9 +218,10 @@
             // 
             this.btnSmallIcons.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnSmallIcons.Image = global::DeptStore1.Properties.Resources.LgIcon;
-            this.btnSmallIcons.Location = new System.Drawing.Point(214, 372);
+            this.btnSmallIcons.Location = new System.Drawing.Point(257, 394);
+            this.btnSmallIcons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSmallIcons.Name = "btnSmallIcons";
-            this.btnSmallIcons.Size = new System.Drawing.Size(111, 52);
+            this.btnSmallIcons.Size = new System.Drawing.Size(148, 64);
             this.btnSmallIcons.TabIndex = 2;
             this.btnSmallIcons.UseVisualStyleBackColor = true;
             this.btnSmallIcons.CheckedChanged += new System.EventHandler(this.btnSmallIcons_CheckedChanged);
@@ -224,18 +230,19 @@
             // 
             this.btnLargeIcons.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnLargeIcons.Image = global::DeptStore1.Properties.Resources.SmIcon;
-            this.btnLargeIcons.Location = new System.Drawing.Point(66, 372);
+            this.btnLargeIcons.Location = new System.Drawing.Point(60, 394);
+            this.btnLargeIcons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLargeIcons.Name = "btnLargeIcons";
-            this.btnLargeIcons.Size = new System.Drawing.Size(111, 52);
+            this.btnLargeIcons.Size = new System.Drawing.Size(148, 64);
             this.btnLargeIcons.TabIndex = 1;
             this.btnLargeIcons.UseVisualStyleBackColor = true;
             this.btnLargeIcons.CheckedChanged += new System.EventHandler(this.btnLargeIcons_CheckedChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 467);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDetails);
@@ -243,6 +250,7 @@
             this.Controls.Add(this.btnSmallIcons);
             this.Controls.Add(this.btnLargeIcons);
             this.Controls.Add(this.lvwStoreItems);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Department Store";
             this.ResumeLayout(false);
