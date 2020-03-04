@@ -1,15 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Activities;
-using System.Activities.Statements;
+﻿using System.Activities;
 using static System.Console;
 
 namespace WorkflowConsole
 {
-
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Beep();
             Activity workflow1 = new Workflow1();
