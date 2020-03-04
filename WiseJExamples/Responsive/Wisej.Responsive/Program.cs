@@ -1,9 +1,6 @@
-﻿using System;
-using Wisej.Web;
-
-namespace Wisej.Responsive
+﻿namespace Wisej.Responsive
 {
-	static class Program
-	{
-	}
+    internal static class Program
+    {
+    }
 }

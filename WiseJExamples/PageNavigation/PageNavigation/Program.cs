@@ -3,12 +3,12 @@ using Wisej.Web;
 
 namespace PageNavigation
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             Application.Session.Username = string.Empty;
 
@@ -21,7 +21,7 @@ namespace PageNavigation
         private static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
         {
             string faultPageName = Application.MainPage.Name;
-            ErrorPage page = (ErrorPage) Application.OpenPages["ErrorPage"];
+            ErrorPage page = (ErrorPage)Application.OpenPages["ErrorPage"];
             if (page != null)
             {
                 page.FaultPageName = faultPageName;
@@ -30,7 +30,7 @@ namespace PageNavigation
             }
             else
             {
-                new ErrorPage {FaultPageName = faultPageName, Message = e.Exception.Message}.Show();
+                new ErrorPage { FaultPageName = faultPageName, Message = e.Exception.Message }.Show();
             }
         }
 

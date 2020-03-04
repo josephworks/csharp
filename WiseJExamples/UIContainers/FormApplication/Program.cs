@@ -1,14 +1,11 @@
-﻿using System;
-using Wisej.Web;
-
-namespace FormApplication
+﻿namespace FormApplication
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             PrimaryForm primaryForm = new PrimaryForm();
             primaryForm.Show();

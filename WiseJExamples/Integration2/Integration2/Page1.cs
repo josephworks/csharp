@@ -1,12 +1,10 @@
-﻿
-using System;
-using System.Data;
-using System.Web.Script.Serialization;
+﻿using System;
 using System.Collections.Generic;
-using Wisej.Web;
-using System.IO;
+using System.Data;
 using System.Drawing;
-
+using System.IO;
+using System.Web.Script.Serialization;
+using Wisej.Web;
 
 namespace Integration2
 {
@@ -19,8 +17,8 @@ namespace Integration2
             InitializeComponent();
         }
 
-        DataTable dtSearchEngines = new DataTable();
-        bool Creating = true;
+        private DataTable dtSearchEngines = new DataTable();
+        private bool Creating = true;
 
         /// <summary>
         /// Initialize data
@@ -58,7 +56,7 @@ namespace Integration2
 
             this.dataGridViewSearchEngines.CellClick += DataGridView1_CellClick;
 
-            Creating = false;            
+            Creating = false;
         }
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -75,7 +73,7 @@ namespace Integration2
                         Application.Navigate(dtSearchEngines.Rows[e.RowIndex]["url"].ToString(), "_blank");
                     }
                 }
-            }            
+            }
         }
 
         /// <summary>
@@ -86,7 +84,7 @@ namespace Integration2
         private void widgetTagCloud_WebRequest(object sender, WebRequestEventArgs e)
         {
             e.Response.ContentType = "application /json";
-            e.Response.Write(DataTableToJson (dtSearchEngines));
+            e.Response.Write(DataTableToJson(dtSearchEngines));
         }
 
         /// <summary>
@@ -94,7 +92,7 @@ namespace Integration2
         /// </summary>
         /// <param name="dt"></param>
         /// <returns></returns>
-        private string DataTableToJson ( DataTable dt)
+        private string DataTableToJson(DataTable dt)
         {
             var list = new List<Dictionary<string, object>>();
 
@@ -134,7 +132,7 @@ namespace Integration2
                 else if (value < 1)
                     value = 1;
 
-                RefreshTagCloud();                
+                RefreshTagCloud();
                 SFSlider sfSlider = this.dataGridViewSearchEngines.Rows[e.RowIndex]["colSlider"].Control as SFSlider;
                 sfSlider.Eval("this.setValue(" + value + ")");
                 this.dataGridViewSearchEngines.BindingContext[this.dataGridViewSearchEngines.DataSource].EndCurrentEdit();
@@ -152,10 +150,10 @@ namespace Integration2
             {
                 SFSlider sfSlider = new SFSlider() { Value = Convert.ToInt32(dtSearchEngines.Rows[i]["frequency"]) };
                 this.dataGridViewSearchEngines.Rows[i]["colSlider"].Control = sfSlider;
-                sfSlider.Dock = DockStyle.Fill;                
+                sfSlider.Dock = DockStyle.Fill;
                 sfSlider.UserData.Row = i;
                 sfSlider.WidgetEvent += SfSlider_WidgetEvent;
-            }            
+            }
         }
 
         /// <summary>
@@ -164,18 +162,19 @@ namespace Integration2
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SfSlider_WidgetEvent(object sender, WidgetEventArgs e)
-        {            
+        {
             SFSlider sfSlider = sender as SFSlider;
             if (sfSlider != null)
             {
                 if (e.Type == "change")
                 {
                     int row = sfSlider.UserData.Row;
-                    dtSearchEngines.Rows[row]["frequency"] = e.Data;                    
-                    RefreshTagCloud();                    
+                    dtSearchEngines.Rows[row]["frequency"] = e.Data;
+                    RefreshTagCloud();
                 }
             }
-        } 
+        }
+
         /// <summary>
         /// Refresh the TagCloud
         /// </summary>
@@ -191,7 +190,7 @@ namespace Integration2
         /// <param name="e"></param>
         private void widgetTagCloud_WidgetEvent(object sender, WidgetEventArgs e)
         {
-            AlertBox.Show("clicked on " + e.Data.url + ": " + e.Data.text);            
+            AlertBox.Show("clicked on " + e.Data.url + ": " + e.Data.text);
         }
 
         private void widgetSignature_WidgetEvent(object sender, WidgetEventArgs e)
@@ -203,6 +202,7 @@ namespace Integration2
                     break;
             }
         }
+
         private void OnSignatureChanged(string imageData)
         {
             this.pictureBox1.Image = ImageFromBase64(imageData);

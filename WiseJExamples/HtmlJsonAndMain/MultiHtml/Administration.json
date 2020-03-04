@@ -21,8 +21,8 @@
 // maxModalStack:			Maximum number of nested modal dialogs. Default: 10.
 // options:					Map of platform options. i.e. {debug: true}
 // settings:               	Map of custom application settings. i.e. {jquery: "http://cdn...", rootPath: "c:\\users\\...", ...}.
-//	
+//
 {
-	"url" : "Administration.html",
-	"startup": "MultiHtml.Administration.Main, MultiHtml"
+  "url": "Administration.html",
+  "startup": "MultiHtml.Administration.Main, MultiHtml"
 }

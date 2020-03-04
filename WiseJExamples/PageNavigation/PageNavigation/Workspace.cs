@@ -53,11 +53,11 @@ namespace PageNavigation
             newWorkspace.Text = "To Page 1";
         }
 
-
         private void settingsButton_Click(object sender, EventArgs e)
         {
             Navigation.Navigate(typeof(Settings));
         }
+
         private void errorButton_Click(object sender, EventArgs e)
         {
             throw new Exception(errorButton.Text);

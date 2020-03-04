@@ -1,7 +1,6 @@
 ﻿using System;
 using Wisej.Web;
 
-
 namespace TreeGrid
 {
     public partial class MainPage : Page
@@ -25,7 +24,6 @@ namespace TreeGrid
             {
                 objectListWindow.ShowDialog();
             }
-
         }
     }
 }

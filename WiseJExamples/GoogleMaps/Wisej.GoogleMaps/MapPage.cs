@@ -102,12 +102,12 @@ namespace Wisej.GoogleMaps
                 if (this.textBoxAddress.Text != "")
                 {
                     this.googleMap1.AddMarker(this.maskedTextBoxID.Text, this.textBoxAddress.Text.Replace("\r\n", ","),
-                        draggable ? new {Draggable = true} : null);
+                        draggable ? new { Draggable = true } : null);
                 }
                 else
                 {
                     this.googleMap1.AddMarker(this.maskedTextBoxID.Text, double.Parse(this.maskedTextBoxLat.Text),
-                        double.Parse(this.maskedTextBoxLng.Text), draggable ? new {Draggable = true} : null);
+                        double.Parse(this.maskedTextBoxLng.Text), draggable ? new { Draggable = true } : null);
                 }
             }
             else
@@ -161,7 +161,7 @@ namespace Wisej.GoogleMaps
             switch (e.Name)
             {
                 case "zoom":
-                    this.trackBar1.Value = (int) e.Value;
+                    this.trackBar1.Value = (int)e.Value;
                     break;
             }
         }
@@ -239,7 +239,6 @@ namespace Wisej.GoogleMaps
                 this.geocodeLng.Text = Geocodes[0].GeocodeGeometry.Location.Lng.ToString();
             }
         }
-
 
         private void buttonCopyToMarkers_Click(object sender, EventArgs e)
         {

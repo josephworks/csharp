@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Web.Script.Serialization;
 using Wisej.Core;
@@ -12,7 +11,7 @@ namespace Integration1
         public Page1()
         {
             InitializeComponent();
-        }       
+        }
 
         /// <summary>
         /// generate data for Pizza store
@@ -29,7 +28,7 @@ namespace Integration1
 
             int maxAmount = 200;
 
-            DateTime startDate = new DateTime(2014, 1, 1);            
+            DateTime startDate = new DateTime(2014, 1, 1);
             DateTime endDate = new DateTime(2016, 12, 31);
 
             int id = 1;
@@ -40,7 +39,6 @@ namespace Integration1
 
             while (dt < endDate)
             {
-
                 foreach (string Cat in Category)
                 {
                     for (int x = 0; x < Dish.GetLength(0); x++)
@@ -81,7 +79,7 @@ namespace Integration1
             public int id;
             public string category;
             public string dish;
-            public int amount;         
+            public int amount;
             public string date;
         }
 
@@ -94,15 +92,15 @@ namespace Integration1
         {
             e.Response.ContentType = "application /json";
             e.Response.Write(GenerateData());
-        }        
+        }
 
         private void button1_Click(object sender, EventArgs e)
-        {            
+        {
             widgetCircularGage.Eval(@"this.gauge.value( this.gauge.value() + 10)");
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {           
+        {
             widgetCircularGage.Eval(@"this.gauge.value( this.gauge.value() - 10)");
         }
 
@@ -138,7 +136,7 @@ namespace Integration1
         }
 
         [WebMethod]
-        public void SetStartValue (int startValue)
+        public void SetStartValue(int startValue)
         {
             WidgetCircularGage_StartValue = startValue;
         }
@@ -154,7 +152,5 @@ namespace Integration1
             var cmb = (sender as ComboBox);
             this.widgetBarGauge.Eval($"this.gauge.option('palette', '{cmb.SelectedItem}')");
         }
-
-        
     }
 }

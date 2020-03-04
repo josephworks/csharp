@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using Wisej.Web;
+﻿using Wisej.Web;
 
 namespace MDIExample
 {

@@ -1,14 +1,13 @@
-﻿using System;
-using Wisej.Web;
+﻿using Wisej.Web;
 
 namespace Wisej.GoogleMaps
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             Application.SessionTimeout += Application_SessionTimeout;
 

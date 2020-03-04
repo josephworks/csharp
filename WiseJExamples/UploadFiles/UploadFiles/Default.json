@@ -23,7 +23,7 @@
 // settings:               	Map of custom application settings. i.e. {jquery: "http://cdn...", rootPath: "c:\\users\\...", ...}
 //
 {
-	"url" : "Default.html",
-	"startup": "UploadFiles.Program.Main, UploadFiles",
-	"enableWebSocket":  true,
+  "url": "Default.html",
+  "startup": "UploadFiles.Program.Main, UploadFiles",
+  "enableWebSocket": true,
 }

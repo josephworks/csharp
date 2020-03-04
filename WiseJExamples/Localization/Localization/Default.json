@@ -23,6 +23,6 @@
 // settings:               	Map of custom application settings. i.e. {jquery: "http://cdn...", rootPath: "c:\\users\\...", ...}
 //
 {
-	"url" : "Default.html",
-	"startup": "Localization.Program.Main, Localization"
+  "url": "Default.html",
+  "startup": "Localization.Program.Main, Localization"
 }

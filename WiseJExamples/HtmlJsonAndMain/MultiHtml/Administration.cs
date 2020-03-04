@@ -1,14 +1,13 @@
-﻿using System;
-using Wisej.Web;
+﻿using Wisej.Web;
 
 namespace MultiHtml
 {
-    static class Administration
+    internal static class Administration
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             Application.MainPage = new AdministrationPage();
         }

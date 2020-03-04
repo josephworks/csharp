@@ -1,8 +1,6 @@
-﻿
-using System;
-using System.Drawing;
-using Winforms = System.Windows.Forms;
+﻿using System.Drawing;
 using Wisej.Web;
+using Winforms = System.Windows.Forms;
 
 namespace Integration4
 {
@@ -12,6 +10,7 @@ namespace Integration4
         {
             InitializeComponent();
         }
+
         private void widgetInput_WebRequest(object sender, WebRequestEventArgs e)
         {
             e.Response.ContentType = "application/json";
@@ -27,7 +26,7 @@ namespace Integration4
             this.widgetTagCloud.Call("setColors", ColorTranslator.ToHtml(lightColor), ColorTranslator.ToHtml(color));
         }
 
-        private string getData ()
+        private string getData()
         {
             string json = @"[
             {""Dish"":""Pizza Margherita"", ""Price"": ""4""},
@@ -39,7 +38,7 @@ namespace Integration4
             {""Dish"":""Rigatoni all'Arrabbiata"", ""Price"": ""5.5""},
             {""Dish"":""Rigatoni al Forno"", ""Price"": ""6""},
             {""Dish"":""Pappardelle con Porcini"", ""Price"": ""7""},
-            {""Dish"":""Cesars Salad"", ""Price"": ""5.5""}            
+            {""Dish"":""Cesars Salad"", ""Price"": ""5.5""}
             ]";
 
             return json;
@@ -52,5 +51,3 @@ namespace Integration4
         }
     }
 }
-
-

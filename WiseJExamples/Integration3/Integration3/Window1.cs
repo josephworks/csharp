@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using Wisej.Web;
 
 namespace Integration3
@@ -14,7 +13,8 @@ namespace Integration3
         private void button1_Click(object sender, EventArgs e)
         {
             this.widgetQRfreeText.Call("setValue", textBoxQRfreeText.Text);
-        }        
+        }
+
         private void widgetPie_WebRequest(object sender, WebRequestEventArgs e)
         {
             e.Response.ContentType = "application/json";
@@ -94,8 +94,7 @@ namespace Integration3
 {""Rank"":9,""Title"":""Despicable Me"",""Studio"":""Uni."",""Worldwide"":""543.1"",""Year"":2010},
 {""Rank"":10,""Title"":""How to Train Your Dragon"",""Studio"":""P/DW"",""Worldwide"":""494.9"",""Year"":2010}]
 ";
-
-        }        
+        }
 
         private void Window1_Load(object sender, EventArgs e)
         {

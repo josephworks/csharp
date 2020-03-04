@@ -33,17 +33,17 @@ namespace ReadOnlyMixin
                 var type = control.GetType();
 
                 if (type == typeof(TextBox))
-                    ((TextBox) control).ReadOnly = isReadOnly;
+                    ((TextBox)control).ReadOnly = isReadOnly;
                 else if (type == typeof(ComboBox))
-                    ((ComboBox) control).ReadOnly = isReadOnly;
+                    ((ComboBox)control).ReadOnly = isReadOnly;
                 else if (type == typeof(DomainUpDown))
-                    ((DomainUpDown) control).ReadOnly = isReadOnly;
+                    ((DomainUpDown)control).ReadOnly = isReadOnly;
                 else if (type == typeof(NumericUpDown))
-                    ((NumericUpDown) control).ReadOnly = isReadOnly;
+                    ((NumericUpDown)control).ReadOnly = isReadOnly;
                 else if (type == typeof(DateTimePicker))
-                    ((DateTimePicker) control).ReadOnly = isReadOnly;
+                    ((DateTimePicker)control).ReadOnly = isReadOnly;
                 else if (type == typeof(ListBox))
-                    ((ListBox) control).ReadOnly = isReadOnly;
+                    ((ListBox)control).ReadOnly = isReadOnly;
             }
         }
     }

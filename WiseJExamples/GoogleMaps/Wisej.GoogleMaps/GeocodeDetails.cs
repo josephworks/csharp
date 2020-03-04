@@ -46,7 +46,6 @@ namespace Wisej.GoogleMaps
             this.treeView.CollapseAll();
         }
 
-
         private void buttonExpandRoot_Click(object sender, System.EventArgs e)
         {
             this.buttonExpandRoot.Text = "Expand Root";
@@ -64,7 +63,6 @@ namespace Wisej.GoogleMaps
                 }
             }
         }
-
 
         private void buttonExpandAll_Click(object sender, System.EventArgs e)
         {
@@ -115,7 +113,6 @@ namespace Wisej.GoogleMaps
                 AddTreeNodeForProperty(subTree, addressComponent.LongName, "Long Name");
                 AddTreeNodeForArray(subTree, addressComponent.PostcodeLocalities, "Postcode Localities");
                 AddTreeNodeForArray(subTree, addressComponent.Types, "Types");
-
 
                 folder.Nodes.Add(subTree);
             }

@@ -62,7 +62,7 @@ namespace RuntimeLocalization
 
                         if (info.PropertyType.GetInterface("IEnumerable") != null)
                         {
-                            IEnumerable collection = (IEnumerable) info.GetValue(value, null);
+                            IEnumerable collection = (IEnumerable)info.GetValue(value, null);
                             if (collection != null)
                             {
                                 foreach (object o in collection)
@@ -74,6 +74,7 @@ namespace RuntimeLocalization
                         }
 
                         break;
+
                     case "ContextMenuStrip":
                     case "DropDownMenu":
                         object obj = info.GetValue(value, null);
@@ -84,6 +85,7 @@ namespace RuntimeLocalization
                         }
 
                         break;
+
                     default:
                         break;
                 }
@@ -95,16 +97,17 @@ namespace RuntimeLocalization
             switch (o.GetType().Name)
             {
                 case "ComboBox":
-                    for (int i = 0; i < ((ComboBox) o).Items.Count; i++)
+                    for (int i = 0; i < ((ComboBox)o).Items.Count; i++)
                     {
-                        ((ComboBox) o).Items[i] = resources.GetString(GetItemName(o, objNameProp, i), _cultureInfo);
+                        ((ComboBox)o).Items[i] = resources.GetString(GetItemName(o, objNameProp, i), _cultureInfo);
                     }
 
                     break;
+
                 case "ListBox":
-                    for (int i = 0; i < ((ListBox) o).Items.Count; i++)
+                    for (int i = 0; i < ((ListBox)o).Items.Count; i++)
                     {
-                        ((ListBox) o).Items[i] = resources.GetString(GetItemName(o, objNameProp, i), _cultureInfo);
+                        ((ListBox)o).Items[i] = resources.GetString(GetItemName(o, objNameProp, i), _cultureInfo);
                     }
 
                     break;

@@ -1,14 +1,11 @@
-﻿using System;
-using Wisej.Web;
-
-namespace Integration3
+﻿namespace Integration3
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        private static void Main()
         {
             Window1 window = new Window1();
             window.Show();

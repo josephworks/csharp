@@ -62,7 +62,7 @@ namespace Integration2
 		        var me = this;
 		        $(this.container).ejSlider ({{
 			        minValue: 1,
-			        maxValue: 25,                                    
+			        maxValue: 25,
 			        incrementStep: 1,
 			        value: {Value},
 			        change: function(e){{ me.fireWidgetEvent(""change"", e.value); }}

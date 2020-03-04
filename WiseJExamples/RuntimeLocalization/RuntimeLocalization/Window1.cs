@@ -60,7 +60,7 @@ namespace RuntimeLocalization
 
             Application.Reload();
 
-            ((Page1) Application.MainPage).SetLanguageMenu();
+            ((Page1)Application.MainPage).SetLanguageMenu();
 
             var localizer = new RuntimeLocalizer();
 

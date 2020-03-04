@@ -25,7 +25,7 @@ namespace PageNavigation
             Page page = Application.OpenPages[pageType.Name];
 
             if (page == null)
-                page = (Page) Activator.CreateInstance(pageType, args);
+                page = (Page)Activator.CreateInstance(pageType, args);
 
             page.Show();
 
@@ -36,7 +36,7 @@ namespace PageNavigation
         {
             PreviousPage = Application.MainPage;
 
-            Workspace page = (Workspace) Application.OpenPages[pageName];
+            Workspace page = (Workspace)Application.OpenPages[pageName];
 
             if (page == null)
                 page = new Workspace(pageName);

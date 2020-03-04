@@ -2,9 +2,9 @@
 
 namespace MultiHtml.Customers
 {
-    static class CustomersStartup
+    internal static class CustomersStartup
     {
-        static void Main()
+        private static void Main()
         {
             Application.MainPage = new CustomerPage();
         }

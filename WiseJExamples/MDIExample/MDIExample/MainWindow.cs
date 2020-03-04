@@ -13,7 +13,6 @@ namespace MDIExample
             InitializeComponent();
         }
 
-
         private void MainWindow_Load(object sender, EventArgs e)
         {
             AddMdiChild();
@@ -65,7 +64,7 @@ namespace MDIExample
         private void AddMdiChild()
         {
             var name = "Form " + (this.MdiChildren.Length + 1);
-            Form form = new ChildMdi(name) {Text = name, MdiParent = this};
+            Form form = new ChildMdi(name) { Text = name, MdiParent = this };
             form.Show();
         }
 
@@ -74,7 +73,7 @@ namespace MDIExample
             if (modeless == null)
             {
                 modeless = new Modeless();
-                modeless.Location = new Point(this.Width - modeless.Width-10, this.Height - modeless.Height-10);
+                modeless.Location = new Point(this.Width - modeless.Width - 10, this.Height - modeless.Height - 10);
                 modeless.TopMost = true;
             }
 
