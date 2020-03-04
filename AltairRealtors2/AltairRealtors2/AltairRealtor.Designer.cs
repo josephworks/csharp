@@ -47,10 +47,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(135, 33);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(254, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(442, 34);
+            this.label1.Size = new System.Drawing.Size(592, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Altair Realtors - Properties Listing";
             // 
@@ -69,9 +70,10 @@
             this.lvwProperties.FullRowSelect = true;
             this.lvwProperties.GridLines = true;
             this.lvwProperties.HideSelection = false;
-            this.lvwProperties.Location = new System.Drawing.Point(50, 93);
+            this.lvwProperties.Location = new System.Drawing.Point(13, 57);
+            this.lvwProperties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvwProperties.Name = "lvwProperties";
-            this.lvwProperties.Size = new System.Drawing.Size(604, 238);
+            this.lvwProperties.Size = new System.Drawing.Size(1050, 329);
             this.lvwProperties.TabIndex = 1;
             this.lvwProperties.UseCompatibleStateImageBehavior = false;
             this.lvwProperties.View = System.Windows.Forms.View.Details;
@@ -80,17 +82,17 @@
             // colPropertyNumber
             // 
             this.colPropertyNumber.Text = "Prop #";
-            this.colPropertyNumber.Width = 50;
+            this.colPropertyNumber.Width = 82;
             // 
             // colPropertyType
             // 
             this.colPropertyType.Text = "Property Type";
-            this.colPropertyType.Width = 78;
+            this.colPropertyType.Width = 102;
             // 
             // colAddress
             // 
             this.colAddress.Text = "Address";
-            this.colAddress.Width = 130;
+            this.colAddress.Width = 162;
             // 
             // colCity
             // 
@@ -100,13 +102,13 @@
             // colState
             // 
             this.colState.Text = "State";
-            this.colState.Width = 40;
+            this.colState.Width = 76;
             // 
             // colZIPCode
             // 
             this.colZIPCode.Text = "ZIP Code";
             this.colZIPCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colZIPCode.Width = 58;
+            this.colZIPCode.Width = 91;
             // 
             // colBedrooms
             // 
@@ -127,9 +129,10 @@
             // 
             // btnNewProperty
             // 
-            this.btnNewProperty.Location = new System.Drawing.Point(82, 359);
+            this.btnNewProperty.Location = new System.Drawing.Point(13, 394);
+            this.btnNewProperty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNewProperty.Name = "btnNewProperty";
-            this.btnNewProperty.Size = new System.Drawing.Size(102, 23);
+            this.btnNewProperty.Size = new System.Drawing.Size(136, 28);
             this.btnNewProperty.TabIndex = 2;
             this.btnNewProperty.Text = "New Property...";
             this.btnNewProperty.UseVisualStyleBackColor = true;
@@ -137,9 +140,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(579, 359);
+            this.btnClose.Location = new System.Drawing.Point(963, 394);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(100, 28);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -147,13 +151,14 @@
             // 
             // AltairRealtor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 397);
+            this.ClientSize = new System.Drawing.Size(1076, 437);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnNewProperty);
             this.Controls.Add(this.lvwProperties);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AltairRealtor";
             this.Text = "Altair Realtors";
             this.ResumeLayout(false);
