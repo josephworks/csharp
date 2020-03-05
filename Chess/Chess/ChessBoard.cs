@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Chess
 {
@@ -10,7 +11,7 @@ namespace Chess
     {
         static ChessBoard me;
         ChessSquare[,] m_b = new ChessSquare[8, 8];
-        public ChessBoard()
+        public ChessBoard(PictureBox[,] pictureBoxes)
         {
             for (int r = 0; r < 8; r++)
             {

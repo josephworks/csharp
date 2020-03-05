@@ -1,5 +1,5 @@
 ﻿using System;
-using Figgle;
+//using Figgle;
 
 namespace ASCIIText
 {
@@ -7,10 +7,10 @@ namespace ASCIIText
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(
-                FiggleFonts.Slant.Render("Hello, World!"));
-            Console.WriteLine(
-                FiggleFonts.Standard.Render("Hello, World!"));
+            //Console.WriteLine(
+            //    FiggleFonts.Slant.Render("Hello, World!"));
+            //Console.WriteLine(
+            //    FiggleFonts.Standard.Render("Hello, World!"));
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine(@".--------------.
