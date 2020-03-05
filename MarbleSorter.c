@@ -112,6 +112,8 @@ void rotate(float r)
 // Multitasking - https://www.robotc.net/wikiarchive/Multitasking_tips
 // Bumpswitch - http://cdn.robotc.net/pdfs/natural-language/hp_touch.pdf
 
+// QUAD ENCODER - http://cdn.robotc.net/pdfs/vex/curriculum/Quadrature+Encoders.pdf
+
 int i;
 int bump;
 int count;
