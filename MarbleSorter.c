@@ -166,7 +166,7 @@ task injectMarble() {
 			sleep(270);
 			injected = injected + 1;
 			stopMotor(marbleGrabber);
-			sleep(1500);
+			sleep(2000);
 		}
 		else {
 			break;
@@ -180,9 +180,9 @@ task scanMarble() {
 			//stops the gate untill marble is ready to drop
 			opperateGateNow = false;
 
-			sleep(500);
+			sleep(1000);
 
-			if (sensorValue[marbleID] > 170 && sensorValue[marbleID] < 175) {
+			if ((SensorValue[marbleID] > 160) && (SensorValue[marbleID] < 175)) {
 				// Clear Marble
 				if(SensorValue[cupRotate] > 0) //Reverse for 5 full rotations
 				{
@@ -196,8 +196,8 @@ task scanMarble() {
 					stopMotor(cupRotater);
 				}
 			}
-			
-			if (sensorValue[marbleID] < 160) {
+
+			if (SensorValue[marbleID] < 160) {
 				// Plastic Marble
 				if(SensorValue[cupRotate] > -116) //Reverse for 5 full rotations
 				{
@@ -211,8 +211,8 @@ task scanMarble() {
 					stopMotor(cupRotater);
 				}
 			}
-			
-			if (sensorValue[marbleID] > 175) {
+
+			if (SensorValue[marbleID] > 175) {
 				// Wood Marble
 				if(SensorValue[cupRotate] > -228) //Reverse for 5 full rotations
 				{
@@ -226,12 +226,12 @@ task scanMarble() {
 					stopMotor(cupRotater);
 				}
 			}
-			
-			sleep(500);
-			startMotor(cupRotater, 48);
-			sleep(200);
-			stopMotor(cupRotater);
-			sleep(850);
+
+			////sleep(500);
+			//startMotor(cupRotater, 48);
+			////sleep(200);
+			//stopMotor(cupRotater);
+			////sleep(100);
 			opperateGateNow = true;
 			// Reset quadenc cupRotate value
 			SensorValue[cupRotate] = 0;
@@ -244,7 +244,8 @@ task scanMarble() {
 }
 
 task opperateGate() {
-	while (true) {
+while (true) {
+	sleep(500);
 		while (opperateGateNow == true) {
 			if (gateOpen == true) {
 				setServo(gateServo, 80);
@@ -323,6 +324,7 @@ task main()
 
 	for (count=0; count < 15; count++) {
 		startTask(opperateGate);
+		sleep(250);
 	}
 
 	while (done == false)
