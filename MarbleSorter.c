@@ -41,7 +41,7 @@
 
 // Functions Prototypes
 void rotate(float r);
-void TurnLeft(float r);
+//void TurnLeft(float r);
 
 // Declare Global Variables     /* '_rotations' will be a counter for every 360 encoder clicks */
 const float _rotations = 360.0;  /* which is one full rotation of the wheel (ie. 2 '_rotations' */
@@ -182,7 +182,8 @@ task scanMarble() {
 
 			sleep(500);
 
-			if (sensorValue[marbleID] > 333) {
+			if (sensorValue[marbleID] > 170 && sensorValue[marbleID] < 175) {
+				// Clear Marble
 				if(SensorValue[cupRotate] > 0) //Reverse for 5 full rotations
 				{
 					startMotor(cupRotater, -48);
@@ -196,30 +197,32 @@ task scanMarble() {
 				}
 			}
 			
-			if (sensorValue[marbleID] > 777) {
-				if(SensorValue[cupRotate] > 777) //Reverse for 5 full rotations
+			if (sensorValue[marbleID] < 160) {
+				// Plastic Marble
+				if(SensorValue[cupRotate] > -116) //Reverse for 5 full rotations
 				{
 					startMotor(cupRotater, -48);
-					untilEncoderCounts(0, cupRotate);
+					untilEncoderCounts(-116, cupRotate);
 					stopMotor(cupRotater);
 				}
 				else {
 					startMotor(cupRotater, 48);
-					untilEncoderCounts(0, cupRotate);
+					untilEncoderCounts(-116, cupRotate);
 					stopMotor(cupRotater);
 				}
 			}
 			
-			if (sensorValue[marbleID] > 999) {
-				if(SensorValue[cupRotate] > 999) //Reverse for 5 full rotations
+			if (sensorValue[marbleID] > 175) {
+				// Wood Marble
+				if(SensorValue[cupRotate] > -228) //Reverse for 5 full rotations
 				{
 					startMotor(cupRotater, -48);
-					untilEncoderCounts(0, cupRotate);
+					untilEncoderCounts(-229, cupRotate);
 					stopMotor(cupRotater);
 				}
 				else {
 					startMotor(cupRotater, 48);
-					untilEncoderCounts(0, cupRotate);
+					untilEncoderCounts(-229, cupRotate);
 					stopMotor(cupRotater);
 				}
 			}
@@ -338,6 +341,7 @@ task main()
 	}
 
 	if (done == true) {
+		// Cortex Off - GreenLED on
 		turnLEDOff(ledCaution);
 		turnLEDOff(ledError);
 		turnLEDOff(led1);
