@@ -351,25 +351,25 @@ task main()
 
 //PSEUDOCODETOIMPL
 //task main() {
-//	while(1==1)
+//	while(true)
 //	{
 //		turnFlashlightOn(flashlight,127);
 //		startMotor(marblemotor,15);
-//		wait(.20);
+//		sleep(200);
 //} }
 //stopMotor(marblemotor);
-//wait(2);
+//sleep(2000);
 //if (SensorValue[lightsensor]>=250) {
 //	startMotor(binmotor,40);
 //	untilEncoderCounts(110,quad);
 //	stopMotor(binmotor);
 //	startMotor(marblemotor,20);
-//	wait(.25);
+//	sleep(200);
 //	stopMotor(marblemotor);
-//	wait(1);
+//	sleep(1000);
 //	stopMotor(marblemotor);
 //	startMotor(binmotor,-40);
 //	untilEncoderCounts(-105,quad);
 //	stopMotor(binmotor);
-//	wait(1);
+//	sleep(1000);
 //}
