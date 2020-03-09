@@ -265,21 +265,37 @@ task ledDebug() {
 	while (injected < 16) {
 		if (injected == 2) {
 			turnLEDOn(led1);
+            sleep(250);
+            turnLEDOff(led1);
+            sleep(250);
+            turnLEDOn(led1);
 		}
 		if (injected == 4) {
 			turnLEDOn(led1);
 			turnLEDOn(led2);
+            sleep(250);
+            turnLEDOff(led2);
+            sleep(250);
+            turnLEDOn(led2);
 		}
 		if (injected == 7) {
 			turnLEDOn(led1);
 			turnLEDOn(led2);
 			turnLEDOn(led3);
+            sleep(250);
+            turnLEDOff(led3);
+            sleep(250);
+            turnLEDOn(led3);
 		}
 		if (injected == 10) {
 			turnLEDOn(led1);
 			turnLEDOn(led2);
 			turnLEDOn(led3);
 			turnLEDOn(led4);
+            sleep(250);
+            turnLEDOff(led4);
+            sleep(250);
+            turnLEDOn(led4);
 		}
 		if (injected == 12) {
 			turnLEDOn(led1);
@@ -287,6 +303,10 @@ task ledDebug() {
 			turnLEDOn(led3);
 			turnLEDOn(led4);
 			turnLEDOn(led5);
+            sleep(250);
+            turnLEDOff(led5);
+            sleep(250);
+            turnLEDOn(led5);
 		}
 		if (injected == 14) {
 			turnLEDOn(led1);
@@ -295,6 +315,10 @@ task ledDebug() {
 			turnLEDOn(led4);
 			turnLEDOn(led5);
 			turnLEDOn(led6);
+            sleep(250);
+            turnLEDOff(led6);
+            sleep(250);
+            turnLEDOn(led6);
 		}
 		if (injected == 15) {
 			done = true;
@@ -345,13 +369,20 @@ task main()
 	if (done == true) {
 		// Cortex Off - GreenLED on
 		turnLEDOff(ledCaution);
+        sleep(100);
 		turnLEDOff(ledError);
-		turnLEDOff(led1);
-		turnLEDOff(led2);
-		turnLEDOff(led3);
-		turnLEDOff(led4);
-		turnLEDOff(led5);
+        sleep(100);
 		turnLEDOff(led6);
+        sleep(100);
+		turnLEDOff(led5);
+        sleep(100);
+		turnLEDOff(led4);
+        sleep(100);
+		turnLEDOff(led3);
+        sleep(100);
+		turnLEDOff(led2);
+        sleep(100);
+		turnLEDOff(led1);
 	}
 }
 
