@@ -212,7 +212,7 @@ task scanMarble() {
 				}
 			}
 
-			if (SensorValue[marbleID] > 175) {
+			if (SensorValue[marbleID] > 115) {
 				// Wood Marble
 				if(SensorValue[cupRotate] > -228) //Reverse for 5 full rotations
 				{
@@ -244,8 +244,8 @@ task scanMarble() {
 }
 
 task opperateGate() {
-while (true) {
-	sleep(500);
+	while (true) {
+		sleep(500);
 		while (opperateGateNow == true) {
 			if (gateOpen == true) {
 				setServo(gateServo, 80);
@@ -265,37 +265,37 @@ task ledDebug() {
 	while (injected < 16) {
 		if (injected == 2) {
 			turnLEDOn(led1);
-            sleep(250);
-            turnLEDOff(led1);
-            sleep(250);
-            turnLEDOn(led1);
+			sleep(250);
+			turnLEDOff(led1);
+			sleep(250);
+			turnLEDOn(led1);
 		}
 		if (injected == 4) {
 			turnLEDOn(led1);
 			turnLEDOn(led2);
-            sleep(250);
-            turnLEDOff(led2);
-            sleep(250);
-            turnLEDOn(led2);
+			sleep(250);
+			turnLEDOff(led2);
+			sleep(250);
+			turnLEDOn(led2);
 		}
 		if (injected == 7) {
 			turnLEDOn(led1);
 			turnLEDOn(led2);
 			turnLEDOn(led3);
-            sleep(250);
-            turnLEDOff(led3);
-            sleep(250);
-            turnLEDOn(led3);
+			sleep(250);
+			turnLEDOff(led3);
+			sleep(250);
+			turnLEDOn(led3);
 		}
 		if (injected == 10) {
 			turnLEDOn(led1);
 			turnLEDOn(led2);
 			turnLEDOn(led3);
 			turnLEDOn(led4);
-            sleep(250);
-            turnLEDOff(led4);
-            sleep(250);
-            turnLEDOn(led4);
+			sleep(250);
+			turnLEDOff(led4);
+			sleep(250);
+			turnLEDOn(led4);
 		}
 		if (injected == 12) {
 			turnLEDOn(led1);
@@ -303,10 +303,10 @@ task ledDebug() {
 			turnLEDOn(led3);
 			turnLEDOn(led4);
 			turnLEDOn(led5);
-            sleep(250);
-            turnLEDOff(led5);
-            sleep(250);
-            turnLEDOn(led5);
+			sleep(250);
+			turnLEDOff(led5);
+			sleep(250);
+			turnLEDOn(led5);
 		}
 		if (injected == 14) {
 			turnLEDOn(led1);
@@ -315,10 +315,10 @@ task ledDebug() {
 			turnLEDOn(led4);
 			turnLEDOn(led5);
 			turnLEDOn(led6);
-            sleep(250);
-            turnLEDOff(led6);
-            sleep(250);
-            turnLEDOn(led6);
+			sleep(250);
+			turnLEDOff(led6);
+			sleep(250);
+			turnLEDOn(led6);
 		}
 		if (injected == 15) {
 			done = true;
@@ -346,8 +346,10 @@ task main()
 
 	startTask(ledDebug);
 
+	startTask(opperateGate);
+
 	for (count=0; count < 15; count++) {
-		startTask(opperateGate);
+		waitUntil(opperateGateNow == true);
 		sleep(250);
 	}
 
@@ -369,19 +371,19 @@ task main()
 	if (done == true) {
 		// Cortex Off - GreenLED on
 		turnLEDOff(ledCaution);
-        sleep(100);
+		sleep(100);
 		turnLEDOff(ledError);
-        sleep(100);
+		sleep(100);
 		turnLEDOff(led6);
-        sleep(100);
+		sleep(100);
 		turnLEDOff(led5);
-        sleep(100);
+		sleep(100);
 		turnLEDOff(led4);
-        sleep(100);
+		sleep(100);
 		turnLEDOff(led3);
-        sleep(100);
+		sleep(100);
 		turnLEDOff(led2);
-        sleep(100);
+		sleep(100);
 		turnLEDOff(led1);
 	}
 }
